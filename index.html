@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { 'colors': { 'on-secondary-fixed': '#241a00', 'on-tertiary-fixed': '#002204', 'secondary-fixed-dim': '#e9c349', 'on-primary-fixed-variant': '#8a153a', 'on-secondary': '#ffffff', 'on-surface-variant': '#574144', 'on-tertiary-container': '#003b0a', 'on-error': '#ffffff', 'on-primary-fixed': '#400014', 'tertiary-fixed-dim': '#88d982', 'tertiary': '#1b6d24', 'primary': '#aa3051', 'error-container': '#ffdad6', 'surface-container-highest': '#ffd9e0', 'primary-container': '#f76b8a', 'surface-tint': '#aa3051', 'on-primary': '#ffffff', 'secondary-fixed': '#ffe088', 'surface-container': '#ffe8ec', 'on-background': '#360d1a', 'secondary': '#735c00', 'inverse-on-surface': '#ffecef', 'inverse-surface': '#50212e', 'surface-container-low': '#fff0f2', 'tertiary-fixed': '#a3f69c', 'surface-dim': '#ffcdd7', 'error': '#ba1a1a', 'surface-bright': '#fff8f7', 'surface': '#fff8f7', 'on-secondary-fixed-variant': '#574500', 'on-primary-container': '#690027', 'on-surface': '#360d1a', 'outline': '#8a7174', 'tertiary-container': '#5cab5a', 'on-tertiary-fixed-variant': '#005312', 'surface-container-high': '#ffe1e6', 'inverse-primary': '#ffb2be', 'on-secondary-container': '#745c00', 'outline-variant': '#ddbfc3', 'primary-fixed': '#ffd9de', 'secondary-container': '#fed65b', 'on-error-container': '#93000a', 'on-tertiary': '#ffffff', 'surface-variant': '#ffd9e0', 'background': '#fff8f7', 'primary-fixed-dim': '#ffb2be', 'surface-container-lowest': '#ffffff' }, 'borderRadius': { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, 'spacing': { 'space-sm': '0.5rem', 'gutter-mobile': '1rem', 'space-lg': '1.5rem', 'gutter': '1.5rem', 'space-xl': '2.5rem', 'margin': '3rem', 'margin-mobile': '1.25rem', 'space-md': '1rem', 'space-xs': '0.25rem' }, 'fontFamily': { 'body-md': ['Plus Jakarta Sans'], 'headline-sm': ['Playfair Display'], 'label-md': ['Plus Jakarta Sans'], 'display-hero': ['Playfair Display'], 'headline-md': ['Playfair Display'], 'label-lg': ['Plus Jakarta Sans'], 'display-hero-mobile': ['Playfair Display'], 'headline-lg-mobile': ['Playfair Display'], 'body-lg': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'headline-lg': ['Playfair Display'] }, 'fontSize': { 'body-md': ['16px', { 'lineHeight': '24px', 'fontWeight': '400' }], 'headline-sm': ['22px', { 'lineHeight': '30px', 'fontWeight': '600' }], 'label-md': ['13px', { 'lineHeight': '18px', 'letterSpacing': '0.04em', 'fontWeight': '600' }], 'display-hero': ['56px', { 'lineHeight': '64px', 'letterSpacing': '-0.02em', 'fontWeight': '700' }], 'headline-md': ['28px', { 'lineHeight': '36px', 'fontWeight': '600' }], 'label-lg': ['15px', { 'lineHeight': '20px', 'letterSpacing': '0.02em', 'fontWeight': '600' }], 'display-hero-mobile': ['36px', { 'lineHeight': '44px', 'letterSpacing': '-0.01em', 'fontWeight': '700' }], 'headline-lg-mobile': ['28px', { 'lineHeight': '36px', 'fontWeight': '600' }], 'body-lg': ['18px', { 'lineHeight': '28px', 'fontWeight': '400' }], 'body-sm': ['14px', { 'lineHeight': '20px', 'fontWeight': '400' }], 'label-sm': ['11px', { 'lineHeight': '16px', 'letterSpacing': '0.06em', 'fontWeight': '700' }], 'headline-lg': ['40px', { 'lineHeight': '48px', 'letterSpacing': '-0.01em', 'fontWeight': '600' }] } } } };</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full bg-primary text-on-primary py-2 px-margin-mobile lg:px-margin text-center font-label-sm"><p class="tracking-wide flex items-center justify-center gap-2"><span>🌸 Chill with pure refreshment — Made with 100% Real Amul Milk &amp; Natural Damask Rose Extracts | Free express delivery on orders over ₹499</span></p></div><div class="h-20 w-full px-margin-mobile lg:px-margin bg-surface/85 backdrop-blur-xl flex items-center justify-between gap-4"><div class="flex items-center gap-3 shrink-0"><img alt="Amul Kool Exotic Rose Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VfNlnFgAH_aVRPIxI2Pw83pRpzfyhNPbmb3LIv1GTQpUHi-jZoIYOwLUDjm4bu2_uDJJZcyoy5i6fCxUiQ7HKZysuNvyo2ett4hZyCwh84pzesnEYAQLZpQIAj217FzWOLjGRYplFL7MZghrR7TbGy3Ex-1F4YvGVCNsreuqJ0lkC-RSd3jF-63L61AVi8BtwHKViUmQnRyCmKzpMn2oKaT8b4sCwCr2vfm0bKVrsicyuisUftJqc8IYg"/><span class="font-headline-sm text-headline-sm text-primary hidden sm:inline tracking-tight">Amul Kool</span></div><nav class="hidden xl:flex items-center gap-6" data-active-classes="bg-primary-container text-on-primary-container font-bold rounded-full px-4 py-2"><a aria-current="page" class="transition-colors bg-primary-container text-on-primary-container font-bold rounded-full px-4 py-2" data-path="home" href="#">Home</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-full" data-path="the-rose-story" href="#">The Rose Story</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-full" data-path="ingredients-and-health" href="#">Ingredients &amp; Health</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-full" data-path="flavour-range" href="#">Flavour Range</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-full" data-path="customer-reviews" href="#">Customer Reviews</a><a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2 px-3 rounded-full" data-path="store-locator" href="#">Store Locator</a></nav><div class="flex items-center gap-3 shrink-0"><button aria-label="Search" class="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden md:flex items-center gap-1 font-label-md text-label-md text-secondary py-2 px-3.5 rounded-full hover:bg-surface-container-high transition-colors" data-path="store-locator" href="#"><span class="material-symbols-outlined text-[18px]">location_on</span>Find Near Me</a><a class="relative inline-flex items-center justify-center px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-label-md text-label-md shadow-[0_14px_34px_-6px_rgba(247,107,138,0.28)] hover:opacity-95 transition-all" data-path="order-online" href="#"><span class="flex items-center gap-1.5"><span>Order Online / Buy Now</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-gradient-to-b from-surface-container-low via-surface to-surface-bright py-12 lg:py-16">
+<!-- Atmospheric subtle glows -->
+<div class="absolute -top-24 left-1/4 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/3 -right-20 w-80 h-80 bg-secondary-fixed/30 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+<!-- Text Left -->
+<div class="lg:col-span-6 flex flex-col items-start gap-6">
+<div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-surface-container-high shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">The Royal Taste of India</span>
+<span class="font-label-sm text-label-sm text-outline">|</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">Amul Gold Standard</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface leading-[1.08] tracking-tight">
+            Pure Amul Goodness, Infused with <span class="text-primary italic font-serif">Royal Damask Rose.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl leading-relaxed">
+            Experience the ultimate cooling sensation crafted from standardized cooperative milk and natural aromatic rose petals. Rich, velvety, and authentically celebratory in every refreshing sip.
+          </p>
+<!-- Badges Pill Cloud -->
+<div class="flex flex-wrap items-center gap-2.5">
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-md text-label-md">100% Real Amul Milk</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[18px]">eco</span>
+<span class="font-label-md text-label-md">Zero Added Preservatives</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">ac_unit</span>
+<span class="font-label-md text-label-md">Naturally Refreshing</span>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container-lowest shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">fitness_center</span>
+<span class="font-label-md text-label-md">Calcium &amp; Protein Rich</span>
+</div>
+</div>
+<!-- Price & CTAs -->
+<div class="w-full flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+<a class="relative inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-lg text-label-lg shadow-xl shadow-primary/25 transition-all duration-200 hover:-translate-y-0.5" href="#packs">
+<span>Shop Single &amp; Multi-Packs</span>
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-lg text-label-lg shadow-sm transition-all duration-200" href="#tasting-profile">
+<span class="material-symbols-outlined text-primary text-[20px]">insights</span>
+<span>Flavour &amp; Sensory Notes</span>
+</a>
+</div>
+<!-- Quick Price Teaser & Trust Metric -->
+<div class="flex items-center gap-6 pt-3 text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-baseline gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-outline">Starting at</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">₹30</span>
+<span class="font-body-sm text-body-sm text-outline">/ 180ml</span>
+</div>
+<span class="h-4 w-px bg-outline-variant"></span>
+<div class="flex items-center gap-1.5">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-bold text-on-surface">4.9</span>
+<span class="text-outline">(14,200+ sips loved)</span>
+</div>
+</div>
+</div>
+<!-- Visual Centerpiece Right -->
+<div class="lg:col-span-6 relative flex items-center justify-center py-6">
+<!-- Glass Spotlight backplate -->
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-high/80 via-primary-fixed/30 to-surface-container-lowest/50 rounded-full blur-2xl transform scale-90"></div>
+<!-- Floating Badges Around the Bottle -->
+<div class="absolute -top-2 left-6 z-20 bg-surface-container-lowest/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg flex items-center gap-2 animate-bounce" style="animation-duration: 3s;">
+<span class="material-symbols-outlined text-primary text-[20px]">thermostat</span>
+<span class="font-label-md text-label-md text-on-surface">Chill at 4°C for Royale Taste</span>
+</div>
+<div class="absolute bottom-16 left-2 z-20 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">autorenew</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">UHT Aseptic Tech</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Shelf Stable 180 Days</span>
+</div>
+</div>
+<div class="absolute top-28 -right-2 z-20 bg-surface-container-lowest/95 backdrop-blur-md px-4 py-2.5 rounded-2xl shadow-xl flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px]">local_florist</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-outline">Botanical Essence</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Kannauj Damask Rose</span>
+</div>
+</div>
+<!-- Composite Hero Display: Bottle with Served Glass -->
+<div class="relative z-10 flex items-end justify-center w-full max-w-lg">
+<!-- Glass Drink Card Overlay behind -->
+<div class="hidden sm:block absolute -left-8 bottom-4 w-48 h-64 rounded-3xl overflow-hidden shadow-2xl z-0 transform -rotate-6 hover:rotate-0 transition-transform duration-300">
+<img alt="Served Amul Kool Rose Milk in Tall Frosted Glass with Fresh Rose Petals" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1cWPv1CQHmV9P5-SufM3cnUVu8qKtEQhbsHEY5J983YEHkJE-fj9M4kP_tadujluL_Z00_qWrUXEhjXcLBTL6aw0mmmxPd7KkADLA9a1g_k0H29DzKIXreUsarlascjesyKd7QrAZCN_5U8YsXAykAYlEc9sXDmz40sW2RM9fCV0Isjv6Edj_LK8xkClQqSB3zUjrHDusttMx3SNY6gJ2_rJkRpU0kq2bO5OehGR79F8hbmeW9_Oc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent flex items-end p-3">
+<span class="font-label-sm text-label-sm text-on-primary">Frosted Servings</span>
+</div>
+</div>
+<!-- Main Bottle Image Focus -->
+<div class="relative z-10 p-4 transform hover:scale-105 transition-transform duration-300 drop-shadow-[0_25px_35px_rgba(170,48,81,0.25)]">
+<img alt="Amul Kool Gold Exotic Rose Flavoured Milk Bottle" class="h-[460px] sm:h-[520px] w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN0EyUvg4CoRQRhPuKdntNg5hVoqvXDprmdKfR_duusTs3Pw24Lzb4F9xrA3xnPtUY90b4BTbaavwYIOnZKu1HVv8EL9toeN2fWr3mPZmhhgMCbfPXtF0T6mCptW1E3q3Pzf4cCXFUpzITfu-wzVw3dt0Z2opcEl3r1Yfh5-HZsmpox04hEvrxtFfxX-77OyDkhDlNhonL1_rvE4mH-R_IAqKYAaUR_xcw4buOgH6jXxiPuStci2gtLBbA5j8hk8IXDw"/>
+</div>
+<!-- Petal accent indicator -->
+<div class="absolute -right-4 bottom-8 z-20 bg-surface-container-lowest/90 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">waving_hand</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Shake well before sipping</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- QUICK HIGHLIGHTS / 4-GRID VALUE BAR -->
+<section class="w-full bg-surface-container-low py-12">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- 1 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">agriculture</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">100% Farm Fresh Milk</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Ethically sourced from over 3.6 million cooperative dairy farmers across Gujarat &amp; India. Wholesome dairy trust.
+          </p>
+</div>
+<!-- 2 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">spa</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Aromatic Damask Rose</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Naturally distilled botanicals deliver therapeutic cooling and authentic Indian floral fragrance without cloying syrupiness.
+          </p>
+</div>
+<!-- 3 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[28px]">vital_signs</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Essential Daily Nutrition</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Packed with 6.5g bio-available dairy protein and 240mg bone-strengthening calcium per full bottle serving.
+          </p>
+</div>
+<!-- 4 -->
+<div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[28px]">directions_run</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Anytime, Anywhere Chill</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Ergonomic PET contoured bottle fits vehicle cup holders, gym bags, festive hampers, and daily office lunchboxes.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- THE ROYAL BOTANICAL JOURNEY (STORY / PROCESS SECTION) -->
+<section class="w-full bg-surface py-20 lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-3 mb-16">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">From Field to Flavour</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">The Royal Botanical Journey</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          How morning-plucked floral petals converge with India's most beloved cooperative dairy cream to produce an iconic chilled nectar.
+        </p>
+</div>
+<!-- Split Layout Banner + Process -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Visual Banner with Splash -->
+<div class="lg:col-span-6 relative">
+<div class="relative w-full h-[460px] rounded-3xl overflow-hidden shadow-2xl">
+<img alt="Milk pouring into a swirl of pink damask rose petals" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPHrgYd1SnEpRbglCKVWSAO7UJhUPLi3N67IJ0VaG97hMC7m4r4CV8eXHAP2c4rvRMNrdWejiP0gu4XCghJatuIJC0wvFAtOuEUi0acMBRyZDNGdRptg7pXNVHWUKHSJ1LNGY_HoA6mzB1qjuXj5LzlcPgcxb6vpYCHrCa_r_dn0aV3pY0nB-TLegZl0kVCTzcJ_MZtqmqw8xXGZ-LMttd8-JsBNNlgixvcuSU3CwbSPWs90dOq8ul"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide">Tradition Meets Technology</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-serif mt-1">Cold-Blended Botanical Extraction</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Preserving the delicate volatile terpene floral notes that typical boiled rose drinks lose.</p>
+</div>
+</div>
+<!-- Decorative Stamp -->
+<div class="absolute -bottom-6 -right-6 hidden sm:flex w-28 h-28 rounded-full bg-secondary-container text-on-secondary-container items-center justify-center flex-col text-center p-2 shadow-xl rotate-12">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<span class="font-label-sm text-label-sm font-bold uppercase leading-tight">100% Real Extracts</span>
+</div>
+</div>
+<!-- 3-Step Timeline Process -->
+<div class="lg:col-span-6 flex flex-col gap-8">
+<!-- Step 1 -->
+<div class="flex gap-5 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
+                1
+              </div>
+<div class="w-0.5 h-full bg-surface-container-high my-2"></div>
+</div>
+<div class="flex flex-col pb-6">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Stage 01</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Dairy Heritage</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Ethical Standardized Dairy Collection</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Amul milk arrives chilled from local village milk cooperatives twice daily. Standardized to 3.0% milk fat and 8.5% SNF for a signature silky body without heavy greasiness.
+              </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-5 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
+                2
+              </div>
+<div class="w-0.5 h-full bg-surface-container-high my-2"></div>
+</div>
+<div class="flex flex-col pb-6">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-primary uppercase font-semibold">Stage 02</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Floral Distillation</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Cold-Infused Rose Petal Distillation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Hand-harvested Damask petals undergo a closed-loop hydro-distillation method. The steam condensate captures gentle, soothing aroma compounds infused seamlessly with pure cane sugar.
+              </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-5 group">
+<div class="flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
+                3
+              </div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-semibold">Stage 03</span>
+<span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="font-label-sm text-label-sm text-outline">Aseptic Packaging</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">UHT Treatment &amp; Hermetic Bottling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+                Ultra-High Temperature continuous sterilization at 138°C for 3 seconds retains active vitamins while guaranteeing 180 days ambient freshness without any artificial chemical preservatives.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- PACK OPTIONS & DIRECT ORDERING GRID (E-COMMERCE READY) -->
+<section class="w-full bg-surface-container-low py-20 lg:py-24" id="packs">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Fast Chilled Delivery</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif mt-1">Select Your Chilled Rose Pack</h2>
+</div>
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quick delivery partners:</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Blinkit 10m</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Zepto 10m</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Instamart</span>
+<span class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Amul Parlour Express</span>
+</div>
+</div>
+<!-- Products Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Pack 1: Single -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-full h-56 rounded-2xl bg-surface-container-high/40 flex items-center justify-center p-4 relative overflow-hidden">
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm">Single Sip</span>
+<img alt="Amul Kool Rose Single Bottle 180ml" class="h-48 w-auto object-contain hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMeuGI9H9e6W_x0K5rY6oqgEOUZX7lYYT8XpLIUyFsZsYX-YcUwGZbbc1yXT_0JIug1nn3UL2rDohGoLW4A2DLsWaS1ptuWaKE3LkPWIFZVZ63gA9Hq2L6cuzKg0uwrp7qDyJS56d8YIM_eXAvL-NWkEb7l-KBZbxqNr1dHiLmnIDHQhNQk5WW48l3y7dY3UTglwSv3pV9ASLLqkmEMz3N0jfn7Sd-cATb2HN8gjmXZWnZW2_k50K75EkhxVHVyJqHQg"/>
+</div>
+<div class="mt-5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded-sm border border-tertiary flex items-center justify-center p-0.5">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">100% Veg</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">180ml Bottle</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mt-2">On-the-Go Single</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Perfect afternoon recharge or post-lunch sweet craving fix. Fits neatly into everyday commute packs.
+            </p>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹30</span>
+<span class="font-body-sm text-body-sm text-outline">MRP (incl. taxes)</span>
+</div>
+</div>
+<div class="mt-6 pt-4 flex flex-col gap-3">
+<div class="flex items-center justify-between rounded-full bg-surface-container px-3 py-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Quantity</span>
+<div class="flex items-center gap-3">
+<button aria-label="Decrease" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-1', -1)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center" id="qty-1">1</span>
+<button aria-label="Increase" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-1', 1)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<button class="w-full py-3.5 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2" onclick="notifyCart('On-the-Go Single (180ml)')" type="button">
+<span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
+<span>Add to Cart</span>
+</button>
+</div>
+</div>
+<!-- Pack 2: 6-Pack (Featured) -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 shadow-xl ring-2 ring-primary-container relative flex flex-col justify-between transform md:-translate-y-2">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold tracking-wider shadow-md">
+            Most Popular Choice
+          </div>
+<div>
+<div class="w-full h-56 rounded-2xl bg-surface-container-high/60 flex items-center justify-center p-4 relative overflow-hidden">
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">Save ₹10</span>
+<!-- Visual of multi bottle -->
+<div class="flex items-center justify-center -space-x-8">
+<img alt="Amul Kool Rose Pack Bottle Left" class="h-44 w-auto object-contain opacity-80 scale-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9rid4lpLWUbGY0P7TJfUQ6twX-ln7YptPL-u0q-5p1MNAODQMSuQiopY1MFFsGJYuTx8hKjxaEjwOkNKIJoMuvNK1TWr1Q7vljMuQnAg_BB8qDSEjRXCYeDgJf7Jua13A_7QVSGfeBGaH-Ax3WZnI3H92plyHsRgeZbMQrvolO6TrQPxejxAWaRhnejQUtEk6sN8T4mTn1q5COs6L4CryfaI1t4Vd4rpJJghMGQmr_ChbedK5pJdkcbcOifXZQ_Qmkw"/>
+<img alt="Amul Kool Rose Pack Bottle Center" class="h-52 w-auto object-contain z-10 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhfIXQK9EYqIO5qGQKsd5PrtWBUksFziZJRH04SbPfBLvP1WwjglPqOnnWQCobzyb1BfyINIkefN0E9sSUu2nUgaq2-mES6xuEzfrPXvtQ-jakzarwTRVeo-0Mr3UqSSbOE4EQHIQNVVL9nvqXCnZ6CfPO7LtUCR2h5gizR-HzvkIkcQl-4wr771auZc69Zz00U2OK3dG_gmJ-mPk1noTZjJFmQ0Xq7kG8o6fsBiifigEjUr0mhIPX3hnueRcyAiekbQ"/>
+<img alt="Amul Kool Rose Pack Bottle Right" class="h-44 w-auto object-contain opacity-80 scale-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8oT0IG3BcxSep-2mDLpYj06ryOb_EtMe2fI6T7CX-9WxFfN1MfmxYvMw-fBVPWwsK72vpkyG8akme46NKjdL04r_JsCJ-NpUQqaT1MfpNoMi_dNQrPNBP3IE2h4bGJ8489o4td8tc1iCCaET0urz1_EoNC_j_t0jGx8H479ZIKuR4zd4yMCj_N7rIob-vHUz2ji_EgR5xRtG1BbtjaD711k_tQOkrCtj-5YbzE3aJFfn-f-Kgyuvfy8BwXHKUElElA"/>
+</div>
+</div>
+<div class="mt-5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded-sm border border-tertiary flex items-center justify-center p-0.5">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">100% Veg</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">6 x 180ml Bottles</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mt-2">Family Chill 6-Pack</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Stock up the refrigerator for evening gatherings, guest hospitality, and quick family milk desserts.
+            </p>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-primary font-bold">₹170</span>
+<span class="font-body-sm text-body-sm line-through text-outline">₹180</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">6% OFF</span>
+</div>
+</div>
+<div class="mt-6 pt-4 flex flex-col gap-3">
+<div class="flex items-center justify-between rounded-full bg-surface-container px-3 py-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Quantity</span>
+<div class="flex items-center gap-3">
+<button aria-label="Decrease" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-2', -1)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center" id="qty-2">1</span>
+<button aria-label="Increase" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-2', 1)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<button class="w-full py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2" onclick="notifyCart('Family Chill 6-Pack')" type="button">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>Express Buy 6-Pack</span>
+</button>
+</div>
+</div>
+<!-- Pack 3: Crate -->
+<div class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+<div>
+<div class="w-full h-56 rounded-2xl bg-surface-container-high/40 flex items-center justify-center p-4 relative overflow-hidden">
+<span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-container font-label-sm text-label-sm font-bold shadow-sm">Bulk Savings</span>
+<!-- Multi icon arrangement -->
+<div class="flex flex-col items-center justify-center text-center gap-2">
+<div class="w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[36px]">inventory_2</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">24 Aseptic Safe Bottles</span>
+</div>
+</div>
+<div class="mt-5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 rounded-sm border border-tertiary flex items-center justify-center p-0.5">
+<div class="w-2 h-2 rounded-full bg-tertiary"></div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">100% Veg</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">24 x 180ml Crate</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif mt-2">Party &amp; Festive Crate</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+              Ideal for weddings, Holi &amp; Diwali celebration coolers, office pantries, and student events.
+            </p>
+<div class="mt-4 flex items-baseline gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">₹650</span>
+<span class="font-body-sm text-body-sm line-through text-outline">₹720</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Free Shipping</span>
+</div>
+</div>
+<div class="mt-6 pt-4 flex flex-col gap-3">
+<div class="flex items-center justify-between rounded-full bg-surface-container px-3 py-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Quantity</span>
+<div class="flex items-center gap-3">
+<button aria-label="Decrease" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-3', -1)" type="button">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center" id="qty-3">1</span>
+<button aria-label="Increase" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-3', 1)" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+<button class="w-full py-3.5 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2" onclick="notifyCart('Party &amp; Festive Crate (24 x 180ml)')" type="button">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+<span>Order Full Crate</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Delivery Notification Toast Placeholder -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3" id="cart-toast">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]">check_circle</span>
+<span class="font-body-sm text-body-sm font-medium" id="cart-toast-text">Added to cart!</span>
+</div>
+</div>
+</section>
+<!-- SENSORY TASTING NOTES & FLAVOUR PROFILE -->
+<section class="w-full bg-surface py-20 lg:py-24" id="tasting-profile">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Sliders & Flavour Profile Left -->
+<div class="lg:col-span-7 flex flex-col gap-8">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Sommelier Evaluation</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif mt-1">Sensory Tasting Notes</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+              Formulated specifically to evoke traditional Indian wedding sherbet without cloying heaviness. Delicate, floral, and deeply quenching.
+            </p>
+</div>
+<!-- Radar-style Sliders Bar Stack -->
+<div class="flex flex-col gap-6 p-8 rounded-3xl bg-surface-container-low shadow-sm">
+<!-- 1 Sweetness -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">cookie</span>
+                  Sweetness (Balanced)
+                </span>
+<span class="text-primary font-bold">65%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-secondary to-secondary-container rounded-full" style="width: 65%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Mild floral honey sweetness, zero synthetic bitter sugar trail.</span>
+</div>
+<!-- 2 Rose Aroma -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">local_florist</span>
+                  Rose Aroma &amp; Essence
+                </span>
+<span class="text-primary font-bold">90%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 90%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Distinct natural Damask petals bouquet upon cap opening.</span>
+</div>
+<!-- 3 Creaminess -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">water_drop</span>
+                  Creaminess &amp; Mouthfeel
+                </span>
+<span class="text-primary font-bold">85%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-fixed-dim to-primary rounded-full" style="width: 85%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Smooth toned dairy body that coats the palate gently without oiliness.</span>
+</div>
+<!-- 4 Chill Factor -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">severe_cold</span>
+                  Chill &amp; Refreshment Index
+                </span>
+<span class="text-primary font-bold">100%</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container to-primary rounded-full" style="width: 100%;"></div>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Instant thermal comfort; cools body temperature on warm tropical days.</span>
+</div>
+</div>
+<!-- Pairing Recommendations -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="p-4 rounded-2xl bg-surface-container text-center flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">bakery_dining</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Indian Mithai</span>
+<span class="font-label-sm text-label-sm text-outline">Gulab Jamun &amp; Kaju Katli</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container text-center flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">restaurant</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Spicy Biryani</span>
+<span class="font-label-sm text-label-sm text-outline">Neutralizes spices</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container text-center flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[24px]">wb_sunny</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Afternoon Break</span>
+<span class="font-label-sm text-label-sm text-outline">3 PM desk refresher</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container text-center flex flex-col items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">blender</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Falooda Base</span>
+<span class="font-label-sm text-label-sm text-outline">Pour over chia &amp; sev</span>
+</div>
+</div>
+</div>
+<!-- Glass Drink Imagery Right -->
+<div class="lg:col-span-5 relative flex justify-center">
+<div class="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl bg-surface-container">
+<img alt="Cold rose milk served in restaurant setting with fresh mint and roses" class="w-full h-[520px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1cWPv1CQHmV9P5-SufM3cnUVu8qKtEQhbsHEY5J983YEHkJE-fj9M4kP_tadujluL_Z00_qWrUXEhjXcLBTL6aw0mmmxPd7KkADLA9a1g_k0H29DzKIXreUsarlascjesyKd7QrAZCN_5U8YsXAykAYlEc9sXDmz40sW2RM9fCV0Isjv6Edj_LK8xkClQqSB3zUjrHDusttMx3SNY6gJ2_rJkRpU0kq2bO5OehGR79F8hbmeW9_Oc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent flex flex-col justify-end p-8 text-on-primary">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase font-bold tracking-widest">Barista Recommendation</span>
+<p class="font-headline-sm text-headline-sm font-serif mt-1">Serve in tall fluted glass over crushed mountain ice</p>
+<p class="font-body-sm text-body-sm opacity-90 mt-2">Garnish with fresh crushed pistachios or edible rose petals for authentic heritage flair.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NUTRITIONAL TRANSPARENCY & CLEAN LABEL -->
+<section class="w-full bg-surface-container-low py-20 lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-3 mb-16">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">100% Clean Dairy</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">Nutritional Transparency</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Good health should never be a mystery. Powered entirely by authentic cow and buffalo milk from India's trusted farmer cooperative.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Nutrition Grid Left -->
+<div class="lg:col-span-8 p-8 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col gap-6">
+<div class="flex items-center justify-between pb-4 border-b border-surface-container">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-serif">Nutritional Facts Panel</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Serving Size: 1 Bottle (180 ml) | Servings per Pack: 1</p>
+</div>
+<div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+              Standardized Milk Base
+            </div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Energy</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">148 kcal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">82 kcal per 100ml</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Dairy Protein</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">5.8 g</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Natural Casein &amp; Whey</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Bio Calcium</span>
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">216 mg</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">25% RDA for adults</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Milk Fat</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">5.4 g</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3.0% Standardized Milk</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Carbohydrates</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">21.6 g</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Lactose &amp; Cane Sugar</span>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Fortified Vitamins</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">Vit A &amp; D</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Immunity &amp; Bone Health</span>
+</div>
+</div>
+<!-- Clean Ingredients Statement -->
+<div class="mt-2 p-4 rounded-2xl bg-surface-container">
+<h4 class="font-label-md text-label-md text-on-surface font-bold">Complete Ingredient List:</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+              Standardized Toned Milk, Sugar, Permitted Natural Rose Flavouring Substances, Natural Colour (INS 127), Fortified with Vitamin A (Retinyl Acetate) and Vitamin D (Cholecalciferol). No chemical preservatives added.
+            </p>
+</div>
+</div>
+<!-- Trust Credentials Right -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 border-2 border-tertiary flex items-center justify-center rounded-sm">
+<div class="w-4 h-4 rounded-full bg-tertiary"></div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-tertiary font-bold uppercase">100% Pure Vegetarian</span>
+<span class="font-label-sm text-label-sm text-outline">Green Dot Guarantee</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Every unit is manufactured under stringent dairy sanitation protocols certified by the Government of India.
+            </p>
+</div>
+<div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-3 text-secondary">
+<span class="material-symbols-outlined text-[32px]">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">FSSAI Certified</span>
+<span class="font-label-sm text-label-sm text-outline">Lic. No. 10012021000071</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Produced at state-of-the-art cooperative automated dairies equipped with microbiological testing at every batch stage.
+            </p>
+</div>
+<div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-[32px]">recycling</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">100% Recyclable Bottle</span>
+<span class="font-label-sm text-label-sm text-outline">High-grade food safe PET</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Please crush the bottle after drinking and place in dry recyclable bins.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONSUMER REVIEWS & SOCIAL BUZZ -->
+<section class="w-full bg-surface py-20 lg:py-24">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Header with Aggregate rating -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Real Customer Love</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif mt-1">Loved Across Every Generation</h2>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-surface-container-low shadow-sm">
+<div class="font-display-hero text-[44px] leading-none text-primary font-bold">4.9</div>
+<div class="flex flex-col">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline font-semibold">14,280+ Verified Indian Buyers</span>
+</div>
+</div>
+</div>
+<!-- Testimonial Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Tastes exactly like royal summer weddings!"</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Most rose milk drinks in India are filled with sickening synthetic chemical syrup. Amul Kool Rose has the actual delicate aroma of real petals and real thick creamy milk.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">
+                AP
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Ananya Pathak</span>
+<span class="font-label-sm text-label-sm text-outline">Mumbai, Maharashtra</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Our fridge never runs out of the 6-pack."</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              My kids come back exhausted from sports coaching in the heat and grab one straight from the chiller. It gives them genuine dairy calcium without artificial sodas.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-secondary">
+                RV
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Raghavan Venkat</span>
+<span class="font-label-sm text-label-sm text-outline">Bengaluru, Karnataka</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Secret ingredient in my homemade faloodas."</p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Pour this over soaked sabja seeds, falooda noodles, and a scoop of vanilla ice cream. Restaurant-quality dessert ready in 60 seconds flat!
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-tertiary">
+                SG
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold">Simran Grewal</span>
+<span class="font-label-sm text-label-sm text-outline">Chandigarh, Punjab</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Social UGC Gallery Banner -->
+<div class="mt-16 p-8 rounded-3xl bg-surface-container-high/60 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">photo_camera</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Share your chilling moment on Instagram</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Tag @Amul_Coop with hashtag #MyKoolMoment for a chance to win a monthly festive crate.</p>
+</div>
+</div>
+<a class="px-6 py-3 rounded-full bg-surface-container-lowest hover:bg-surface text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-2" href="#">
+<span>Explore UGC Wall</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- FAQ & CHILL TIPS ACCORDION -->
+<section class="w-full bg-surface-container-low py-20 lg:py-24">
+<div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin">
+<!-- Section Header -->
+<div class="text-center flex flex-col items-center gap-3 mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Got Questions?</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">Frequently Asked Questions &amp; Tips</h2>
+</div>
+<!-- Accordion List -->
+<div class="flex flex-col gap-4">
+<!-- FAQ 1 -->
+<details class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer" open="">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
+<span>How should I store Amul Kool Rose before opening?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Thanks to Amul’s advanced UHT (Ultra High Temperature) aseptic processing and multi-barrier hermetic sealing, unopened bottles can be safely stored at ambient room temperature in a cool, dry place for up to 180 days. However, for the true royal experience, we highly recommend chilling it in the refrigerator at 4°C for at least 2 hours before drinking.
+          </div>
+</details>
+<!-- FAQ 2 -->
+<details class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
+<span>Is Amul Kool made with real fresh milk?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Yes, absolutely. Amul Kool contains 100% standardized pure cooperative dairy milk. Unlike powdered recreations or oil-stabilized non-dairy drinks, Amul Kool retains natural dairy nutrients including complete milk protein, vitamin B12, and bio-available calcium.
+          </div>
+</details>
+<!-- FAQ 3 -->
+<details class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
+<span>Can Amul Kool Rose be used in desserts or served warm?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            While designed to be enjoyed ice-cold, it is a versatile culinary delight! You can use it as a flavorful base for royal Rose Kheer, pour it over chilled Falooda vermicelli, blend it into rose ice-cream smoothies, or gently warm it during cold winter evenings for a calming floral nightcap.
+          </div>
+</details>
+<!-- FAQ 4 -->
+<details class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
+<span>Are there any added artificial preservatives in this drink?</span>
+<span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+</summary>
+<div class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            None. Zero chemical preservatives like sodium benzoate or potassium sorbate are added. The drink’s shelf-life is achieved strictly through thermal aseptic sterilization and hermetic barrier packaging, guaranteeing pure and wholesome indulgence.
+          </div>
+</details>
+</div>
+</div>
+</section>
+<!-- STORE LOCATOR / INSTANT ORDER BANNER (CALL TO ACTION) -->
+<section class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-16">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="flex flex-col gap-2 max-w-xl text-center lg:text-left">
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase font-bold tracking-widest">Craving Instant Refreshment?</span>
+<h2 class="font-headline-lg text-headline-lg font-serif">Get Chilled Amul Kool Rose Delivered in Minutes</h2>
+<p class="font-body-md text-body-md opacity-90">
+            Available at 1,00,000+ retail stores, Amul Preferred Outlets, railway kiosks, and top grocery quick-commerce apps nationwide.
+          </p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-4">
+<a class="px-8 py-4 rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-xl hover:bg-surface transition-all" href="#packs">
+            Order Direct Online
+          </a>
+<a class="px-6 py-4 rounded-full bg-on-primary/15 hover:bg-on-primary/25 backdrop-blur-md text-on-primary font-label-lg text-label-lg transition-all flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">near_me</span>
+<span>Locate Nearest Amul Parlour</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- INLINE CART INTERACTIVITY SCRIPT -->
+<script>
+    function changeQty(id, delta) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      let val = parseInt(el.textContent, 10) || 1;
+      val = Math.max(1, Math.min(99, val + delta));
+      el.textContent = val;
+    }
+
+    function notifyCart(productName) {
+      const toast = document.getElementById('cart-toast');
+      const toastText = document.getElementById('cart-toast-text');
+      if (!toast || !toastText) return;
+      toastText.textContent = `Added ${productName} to your basket!`;
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3000);
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low text-on-surface"><div class="w-full px-margin-mobile lg:px-margin pt-space-xl pb-margin"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-12 lg:gap-x-12"><div class="lg:col-span-4 flex flex-col gap-4"><div class="flex items-center gap-3"><img alt="Amul Kool Exotic Rose Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VfNlnFgAH_aVRPIxI2Pw83pRpzfyhNPbmb3LIv1GTQpUHi-jZoIYOwLUDjm4bu2_uDJJZcyoy5i6fCxUiQ7HKZysuNvyo2ett4hZyCwh84pzesnEYAQLZpQIAj217FzWOLjGRYplFL7MZghrR7TbGy3Ex-1F4YvGVCNsreuqJ0lkC-RSd3jF-63L61AVi8BtwHKViUmQnRyCmKzpMn2oKaT8b4sCwCr2vfm0bKVrsicyuisUftJqc8IYg"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight">Amul Kool Exotic Rose</span></div><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Born from India's pioneering dairy cooperative heritage, Amul Kool Exotic Rose marries wholesome, nutrient-dense fresh milk with delicate Damask rose petals. Crafted for celebration, refreshment, and royal sweetness in every sip.</p><div class="flex items-center gap-3 mt-2"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm"><div class="w-[18px] h-[18px] border-[1.5px] border-tertiary flex items-center justify-center rounded-sm"><div class="w-2 h-2 rounded-full bg-tertiary"></div></div><span class="font-label-sm text-label-sm text-tertiary uppercase">100% Vegetarian</span></div><div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm"><span class="material-symbols-outlined text-tertiary text-[18px]">verified</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">FSSAI Certified</span></div></div></div><div class="lg:col-span-2 flex flex-col gap-3"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Quick Explore</h4><nav class="flex flex-col gap-2.5"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">The Rose Story</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Natural Ingredients</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">All Flavours</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Verified Reviews</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Store Locator</a></nav></div><div class="lg:col-span-3 flex flex-col gap-3"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Nutritional Promise</h4><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Rich in wholesome dairy calcium, natural vitamins, and floral botanicals. Produced in world-class cooperative dairy units ensuring farm-fresh purity without artificial preservatives.</p><div class="mt-1 flex flex-col gap-1.5"><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>100% Real Amul Toned Milk</div><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>Ethically Sourced Rose Extracts</div><div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm"><span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>Recyclable Cans &amp; PET Bottles</div></div></div><div class="lg:col-span-3 flex flex-col gap-4"><h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Join The Kool Club</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Get early access to exclusive exotic drops, dairy recipes, and seasonal celebration bundles.</p><form class="flex flex-col gap-2.5"><div class="relative w-full"><input class="w-full h-12 px-4 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Enter your email address" type="email"/></div><button class="w-full h-11 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2 shadow-sm" type="submit"><span>Subscribe Now</span><span class="material-symbols-outlined text-[18px]">send</span></button></form><div class="flex items-center gap-3 mt-1"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Follow Us:</span><div class="flex items-center gap-2"><span class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">public</span><span class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">share</span><span class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">forum</span></div></div></div></div><div class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant"><p>© 2025 Gujarat Co-operative Milk Marketing Federation Ltd. (Amul). All rights reserved.</p><div class="flex items-center gap-6 font-label-sm text-label-sm"><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" href="#">FSSAI License Info</a></div></div></div></footer></body></html>
