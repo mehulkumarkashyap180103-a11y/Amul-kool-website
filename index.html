@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>Amul Kool Exotic Rose • Cinematic Experience & Store</title>
-  <meta name="description" content="Experience the ultimate cooling sensation crafted from standardized cooperative milk and natural Damask rose petals in an interactive 240-frame scroll journey.">
-  
+  <meta name="description"
+    content="Experience the ultimate cooling sensation crafted from standardized cooperative milk and natural Damask rose petals in an interactive 240-frame scroll journey.">
+
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌹</text></svg>">
 
   <!-- Google Fonts & Material Symbols -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -124,6 +131,7 @@
   <!-- Core Animation Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-surface font-body-md text-on-surface antialiased">
 
   <!-- Preloader Screen -->
@@ -133,7 +141,7 @@
         <span class="brand-crest">✦ AMUL KOOL EXOTIC ✦</span>
         <h2 class="brand-logo-text">ROSE MILK</h2>
       </div>
-      
+
       <div class="liquid-loader">
         <div class="drop-pulse"></div>
         <div class="spin-ring"></div>
@@ -153,7 +161,8 @@
 
   <!-- Ambient Audio Indicator / Quick Floating Bar -->
   <div class="ambient-pill-bar" id="floating-audio-pill">
-    <button id="sound-toggle-btn" class="pill-btn sound-btn" aria-label="Toggle Ethereal Soundscape" title="Toggle Soundscape">
+    <button id="sound-toggle-btn" class="pill-btn sound-btn" aria-label="Toggle Ethereal Soundscape"
+      title="Toggle Soundscape">
       <span class="sound-wave-icon">
         <span class="bar bar-1"></span>
         <span class="bar bar-2"></span>
@@ -192,16 +201,16 @@
       <div class="header-actions">
         <button id="header-play-btn" class="action-btn-ghost" title="Auto-Play Cinema Mode">
           <svg class="play-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-            <path d="M8 5v14l11-7z"/>
+            <path d="M8 5v14l11-7z" />
           </svg>
           <span class="btn-lbl">Cinema Play</span>
         </button>
         <button id="order-modal-trigger" class="action-btn-primary" type="button">
-  <span>🛒 Basket • ₹30</span>
-  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-    <path d="M5 12h14M12 5l7 7-7 7"/>
-  </svg>
-</button>
+          <span>🛒 Basket • ₹30</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
     </div>
     <!-- Global Scroll Progress Line -->
@@ -210,10 +219,10 @@
 
   <!-- MAIN SCROLL CONTAINER: 240-Frame Interactive Experience -->
   <main class="main-experience">
-    
+
     <section class="scroll-animation-section" id="hero-scroll">
       <div class="sticky-viewport">
-        
+
         <!-- Canvas Frame Sequence -->
         <div class="canvas-wrapper">
           <canvas id="animation-canvas" width="1280" height="720"></canvas>
@@ -225,7 +234,7 @@
         <div class="particle-field" id="particle-field"></div>
 
         <!-- STORYTELLING HUD OVERLAYS (Fade in & out synced with scroll frames) -->
-        
+
         <!-- PHASE 1: FRAMES 0 - 45 -->
         <div class="story-phase phase-1" id="phase-1">
           <div class="phase-inner center-aligned">
@@ -255,7 +264,8 @@
               <div class="card-tag">PHASE 01 • THE SWIRL</div>
               <h2 class="card-headline">Luscious Liquid Motion</h2>
               <p class="card-body">
-                Watch 100% whole dairy milk aerated into a creamy pink vortex. Every fold captures the silky, delicate botanical bouquet of crushed Damascena rosebuds.
+                Watch 100% whole dairy milk aerated into a creamy pink vortex. Every fold captures the silky, delicate
+                botanical bouquet of crushed Damascena rosebuds.
               </p>
               <div class="metric-grid">
                 <div class="metric-item">
@@ -282,7 +292,8 @@
               <div class="card-tag">PHASE 02 • THE VESSEL</div>
               <h2 class="card-headline">Crowned in Glass</h2>
               <p class="card-body">
-                Rising from the swirl, our vintage apothecary glass bottle preserves maximum freshness, crisp floral aromas, and cold-retention from farm to palm.
+                Rising from the swirl, our vintage apothecary glass bottle preserves maximum freshness, crisp floral
+                aromas, and cold-retention from farm to palm.
               </p>
               <ul class="flavor-tasting-notes">
                 <li>
@@ -318,7 +329,7 @@
               <div class="bottle-badge">✦ RESERVE EDITION ✦</div>
               <h2 class="final-title">Pure Bliss In Every Drop</h2>
               <p class="final-sub">Amul Royale Rose Milk • 200ml Premium Glass Contour</p>
-              
+
               <div class="final-actions-row">
                 <a href="#packs" class="btn-reserve-primary">
                   <span class="btn-text">Select Pack Options</span>
@@ -326,7 +337,8 @@
                 </a>
                 <button class="btn-reserve-secondary" id="replay-btn">
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                    <path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/>
+                    <path
+                      d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" />
                   </svg>
                   <span>Replay Flow</span>
                 </button>
@@ -345,9 +357,10 @@
         <!-- FRAME CONTROLLER HUD (Bottom Bar) -->
         <div class="animation-hud">
           <div class="hud-left">
-            <button id="hud-play-toggle" class="hud-circle-btn" aria-label="Play/Pause Frame Scrubbing" title="Auto-Play Scrub">
+            <button id="hud-play-toggle" class="hud-circle-btn" aria-label="Play/Pause Frame Scrubbing"
+              title="Auto-Play Scrub">
               <svg id="hud-play-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                <path d="M8 5v14l11-7z"/>
+                <path d="M8 5v14l11-7z" />
               </svg>
             </button>
             <div class="frame-digits">
@@ -404,43 +417,51 @@
         <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- 1 -->
-            <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+            <div
+              class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
               <div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
                 <span class="material-symbols-outlined text-[28px]">agriculture</span>
               </div>
               <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">100% Farm Fresh Milk</h3>
               <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Ethically sourced from over 3.6 million cooperative dairy farmers across Gujarat & India. Wholesome dairy trust.
+                Ethically sourced from over 3.6 million cooperative dairy farmers across Gujarat & India. Wholesome
+                dairy trust.
               </p>
             </div>
             <!-- 2 -->
-            <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+            <div
+              class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
               <div class="w-12 h-12 rounded-xl bg-primary-fixed flex items-center justify-center text-primary">
                 <span class="material-symbols-outlined text-[28px]">spa</span>
               </div>
               <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Aromatic Damask Rose</h3>
               <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Naturally distilled botanicals deliver therapeutic cooling and authentic Indian floral fragrance without cloying syrupiness.
+                Naturally distilled botanicals deliver therapeutic cooling and authentic Indian floral fragrance without
+                cloying syrupiness.
               </p>
             </div>
             <!-- 3 -->
-            <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+            <div
+              class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
               <div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center text-secondary">
                 <span class="material-symbols-outlined text-[28px]">vital_signs</span>
               </div>
               <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Essential Daily Nutrition</h3>
               <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Packed with 6.5g bio-available dairy protein and 240mg bone-strengthening calcium per full bottle serving.
+                Packed with 6.5g bio-available dairy protein and 240mg bone-strengthening calcium per full bottle
+                serving.
               </p>
             </div>
             <!-- 4 -->
-            <div class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
+            <div
+              class="p-6 rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
               <div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center text-tertiary">
                 <span class="material-symbols-outlined text-[28px]">directions_run</span>
               </div>
               <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Anytime, Anywhere Chill</h3>
               <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Ergonomic PET contoured bottle fits vehicle cup holders, gym bags, festive hampers, and daily office lunchboxes.
+                Ergonomic PET contoured bottle fits vehicle cup holders, gym bags, festive hampers, and daily office
+                lunchboxes.
               </p>
             </div>
           </div>
@@ -452,10 +473,12 @@
         <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
           <!-- Section Header -->
           <div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-3 mb-16">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">From Field to Flavour</span>
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">From Field to
+              Flavour</span>
             <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">The Royal Botanical Journey</h2>
             <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              How morning-plucked floral petals converge with India's most beloved cooperative dairy cream to produce an iconic chilled nectar.
+              How morning-plucked floral petals converge with India's most beloved cooperative dairy cream to produce an
+              iconic chilled nectar.
             </p>
           </div>
           <!-- Split Layout Banner + Process -->
@@ -463,16 +486,23 @@
             <!-- Visual Banner with Splash -->
             <div class="lg:col-span-6 relative">
               <div class="relative w-full h-[460px] rounded-3xl overflow-hidden shadow-2xl">
-                <img alt="Milk pouring into a swirl of pink damask rose petals" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPHrgYd1SnEpRbglCKVWSAO7UJhUPLi3N67IJ0VaG97hMC7m4r4CV8eXHAP2c4rvRMNrdWejiP0gu4XCghJatuIJC0wvFAtOuEUi0acMBRyZDNGdRptg7pXNVHWUKHSJ1LNGY_HoA6mzB1qjuXj5LzlcPgcxb6vpYCHrCa_r_dn0aV3pY0nB-TLegZl0kVCTzcJ_MZtqmqw8xXGZ-LMttd8-JsBNNlgixvcuSU3CwbSPWs90dOq8ul"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent"></div>
-                <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md">
-                  <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide">Tradition Meets Technology</span>
-                  <p class="font-headline-sm text-headline-sm text-on-surface font-serif mt-1">Cold-Blended Botanical Extraction</p>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Preserving the delicate volatile terpene floral notes that typical boiled rose drinks lose.</p>
+                <img alt="Milk pouring into a swirl of pink damask rose petals" class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPHrgYd1SnEpRbglCKVWSAO7UJhUPLi3N67IJ0VaG97hMC7m4r4CV8eXHAP2c4rvRMNrdWejiP0gu4XCghJatuIJC0wvFAtOuEUi0acMBRyZDNGdRptg7pXNVHWUKHSJ1LNGY_HoA6mzB1qjuXj5LzlcPgcxb6vpYCHrCa_r_dn0aV3pY0nB-TLegZl0kVCTzcJ_MZtqmqw8xXGZ-LMttd8-JsBNNlgixvcuSU3CwbSPWs90dOq8ul" />
+                <div class="absolute inset-0 bg-gradient-to-t from-on-background/80 via-transparent to-transparent">
+                </div>
+                <div
+                  class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl bg-surface-container-lowest/90 backdrop-blur-md">
+                  <span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wide">Tradition
+                    Meets Technology</span>
+                  <p class="font-headline-sm text-headline-sm text-on-surface font-serif mt-1">Cold-Blended Botanical
+                    Extraction</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Preserving the delicate volatile
+                    terpene floral notes that typical boiled rose drinks lose.</p>
                 </div>
               </div>
               <!-- Decorative Stamp -->
-              <div class="absolute -bottom-6 -right-6 hidden sm:flex w-28 h-28 rounded-full bg-secondary-container text-on-secondary-container items-center justify-center flex-col text-center p-2 shadow-xl rotate-12">
+              <div
+                class="absolute -bottom-6 -right-6 hidden sm:flex w-28 h-28 rounded-full bg-secondary-container text-on-secondary-container items-center justify-center flex-col text-center p-2 shadow-xl rotate-12">
                 <span class="material-symbols-outlined text-[24px]">verified</span>
                 <span class="font-label-sm text-label-sm font-bold uppercase leading-tight">100% Real Extracts</span>
               </div>
@@ -482,7 +512,8 @@
               <!-- Step 1 -->
               <div class="flex gap-5 group">
                 <div class="flex flex-col items-center">
-                  <div class="w-12 h-12 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
+                  <div
+                    class="w-12 h-12 rounded-full bg-primary text-on-primary font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
                     1
                   </div>
                   <div class="w-0.5 h-full bg-surface-container-high my-2"></div>
@@ -493,16 +524,19 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
                     <span class="font-label-sm text-label-sm text-outline">Dairy Heritage</span>
                   </div>
-                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Ethical Standardized Dairy Collection</h3>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Ethical Standardized
+                    Dairy Collection</h3>
                   <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
-                    Amul milk arrives chilled from local village milk cooperatives twice daily. Standardized to 3.0% milk fat and 8.5% SNF for a signature silky body without heavy greasiness.
+                    Amul milk arrives chilled from local village milk cooperatives twice daily. Standardized to 3.0%
+                    milk fat and 8.5% SNF for a signature silky body without heavy greasiness.
                   </p>
                 </div>
               </div>
               <!-- Step 2 -->
               <div class="flex gap-5 group">
                 <div class="flex flex-col items-center">
-                  <div class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
+                  <div
+                    class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
                     2
                   </div>
                   <div class="w-0.5 h-full bg-surface-container-high my-2"></div>
@@ -513,16 +547,19 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
                     <span class="font-label-sm text-label-sm text-outline">Floral Distillation</span>
                   </div>
-                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Cold-Infused Rose Petal Distillation</h3>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Cold-Infused Rose
+                    Petal Distillation</h3>
                   <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
-                    Hand-harvested Damask petals undergo a closed-loop hydro-distillation method. The steam condensate captures gentle, soothing aroma compounds infused seamlessly with pure cane sugar.
+                    Hand-harvested Damask petals undergo a closed-loop hydro-distillation method. The steam condensate
+                    captures gentle, soothing aroma compounds infused seamlessly with pure cane sugar.
                   </p>
                 </div>
               </div>
               <!-- Step 3 -->
               <div class="flex gap-5 group">
                 <div class="flex flex-col items-center">
-                  <div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
+                  <div
+                    class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container font-headline-sm text-headline-sm flex items-center justify-center font-serif shadow-md">
                     3
                   </div>
                 </div>
@@ -532,9 +569,11 @@
                     <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
                     <span class="font-label-sm text-label-sm text-outline">Aseptic Packaging</span>
                   </div>
-                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">UHT Treatment & Hermetic Bottling</h3>
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">UHT Treatment &
+                    Hermetic Bottling</h3>
                   <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
-                    Ultra-High Temperature continuous sterilization at 138°C for 3 seconds retains active vitamins while guaranteeing 180 days ambient freshness without any artificial chemical preservatives.
+                    Ultra-High Temperature continuous sterilization at 138°C for 3 seconds retains active vitamins while
+                    guaranteeing 180 days ambient freshness without any artificial chemical preservatives.
                   </p>
                 </div>
               </div>
@@ -549,25 +588,40 @@
           <!-- Section Header -->
           <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
-              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Fast Chilled Delivery</span>
-              <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif mt-1">Select Your Chilled Rose Pack</h2>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Fast Chilled
+                Delivery</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif mt-1">Select Your Chilled Rose
+                Pack</h2>
             </div>
             <div class="flex items-center gap-2 flex-wrap">
               <span class="font-label-sm text-label-sm text-on-surface-variant">Quick delivery partners:</span>
-              <span class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Blinkit 10m</span>
-              <span class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Zepto 10m</span>
-              <span class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Instamart</span>
-              <span class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Amul Parlour Express</span>
+              <span
+                class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Blinkit
+                10m</span>
+              <span
+                class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Zepto
+                10m</span>
+              <span
+                class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Instamart</span>
+              <span
+                class="px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm font-semibold shadow-sm">Amul
+                Parlour Express</span>
             </div>
           </div>
           <!-- Products Grid -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Pack 1: Single -->
-            <div class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div
+              class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
               <div>
-                <div class="w-full h-56 rounded-2xl bg-surface-container-high/40 flex items-center justify-center p-4 relative overflow-hidden">
-                  <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm">Single Sip</span>
-                  <img alt="Amul Kool Rose Single Bottle 180ml" class="h-48 w-auto object-contain hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMeuGI9H9e6W_x0K5rY6oqgEOUZX7lYYT8XpLIUyFsZsYX-YcUwGZbbc1yXT_0JIug1nn3UL2rDohGoLW4A2DLsWaS1ptuWaKE3LkPWIFZVZ63gA9Hq2L6cuzKg0uwrp7qDyJS56d8YIM_eXAvL-NWkEb7l-KBZbxqNr1dHiLmnIDHQhNQk5WW48l3y7dY3UTglwSv3pV9ASLLqkmEMz3N0jfn7Sd-cATb2HN8gjmXZWnZW2_k50K75EkhxVHVyJqHQg"/>
+                <div
+                  class="w-full h-56 rounded-2xl bg-surface-container-high/40 flex items-center justify-center p-4 relative overflow-hidden">
+                  <span
+                    class="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm">Single
+                    Sip</span>
+                  <img alt="Amul Kool Rose Single Bottle 180ml"
+                    class="h-48 w-auto object-contain hover:scale-105 transition-transform"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMeuGI9H9e6W_x0K5rY6oqgEOUZX7lYYT8XpLIUyFsZsYX-YcUwGZbbc1yXT_0JIug1nn3UL2rDohGoLW4A2DLsWaS1ptuWaKE3LkPWIFZVZ63gA9Hq2L6cuzKg0uwrp7qDyJS56d8YIM_eXAvL-NWkEb7l-KBZbxqNr1dHiLmnIDHQhNQk5WW48l3y7dY3UTglwSv3pV9ASLLqkmEMz3N0jfn7Sd-cATb2HN8gjmXZWnZW2_k50K75EkhxVHVyJqHQg" />
                 </div>
                 <div class="mt-5 flex items-center justify-between">
                   <div class="flex items-center gap-2">
@@ -591,34 +645,49 @@
                 <div class="flex items-center justify-between rounded-full bg-surface-container px-3 py-1.5">
                   <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Quantity</span>
                   <div class="flex items-center gap-3">
-                    <button aria-label="Decrease" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-1', -1)" type="button">
+                    <button aria-label="Decrease"
+                      class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
+                      onclick="changeQty('qty-1', -1)" type="button">
                       <span class="material-symbols-outlined text-[16px]">remove</span>
                     </button>
-                    <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center" id="qty-1">1</span>
-                    <button aria-label="Increase" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-1', 1)" type="button">
+                    <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center"
+                      id="qty-1">1</span>
+                    <button aria-label="Increase"
+                      class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
+                      onclick="changeQty('qty-1', 1)" type="button">
                       <span class="material-symbols-outlined text-[16px]">add</span>
                     </button>
                   </div>
                 </div>
-                <button class="w-full py-3.5 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2" onclick="notifyCart('On-the-Go Single (180ml)')" type="button">
+                <button
+                  class="w-full py-3.5 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2"
+                  onclick="notifyCart('On-the-Go Single (180ml)')" type="button">
                   <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
                   <span>Add to Cart</span>
                 </button>
               </div>
             </div>
             <!-- Pack 2: 6-Pack (Featured) -->
-            <div class="rounded-3xl bg-surface-container-lowest p-6 shadow-xl ring-2 ring-primary-container relative flex flex-col justify-between transform md:-translate-y-2">
-              <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold tracking-wider shadow-md">
+            <div
+              class="rounded-3xl bg-surface-container-lowest p-6 shadow-xl ring-2 ring-primary-container relative flex flex-col justify-between transform md:-translate-y-2">
+              <div
+                class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase font-bold tracking-wider shadow-md">
                 Most Popular Choice
               </div>
               <div>
-                <div class="w-full h-56 rounded-2xl bg-surface-container-high/60 flex items-center justify-center p-4 relative overflow-hidden">
-                  <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">Save ₹10</span>
+                <div
+                  class="w-full h-56 rounded-2xl bg-surface-container-high/60 flex items-center justify-center p-4 relative overflow-hidden">
+                  <span
+                    class="absolute top-3 left-3 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold shadow-sm">Save
+                    ₹10</span>
                   <!-- Visual of multi bottle -->
                   <div class="flex items-center justify-center -space-x-8">
-                    <img alt="Amul Kool Rose Pack Bottle Left" class="h-44 w-auto object-contain opacity-80 scale-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9rid4lpLWUbGY0P7TJfUQ6twX-ln7YptPL-u0q-5p1MNAODQMSuQiopY1MFFsGJYuTx8hKjxaEjwOkNKIJoMuvNK1TWr1Q7vljMuQnAg_BB8qDSEjRXCYeDgJf7Jua13A_7QVSGfeBGaH-Ax3WZnI3H92plyHsRgeZbMQrvolO6TrQPxejxAWaRhnejQUtEk6sN8T4mTn1q5COs6L4CryfaI1t4Vd4rpJJghMGQmr_ChbedK5pJdkcbcOifXZQ_Qmkw"/>
-                    <img alt="Amul Kool Rose Pack Bottle Center" class="h-52 w-auto object-contain z-10 drop-shadow-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhfIXQK9EYqIO5qGQKsd5PrtWBUksFziZJRH04SbPfBLvP1WwjglPqOnnWQCobzyb1BfyINIkefN0E9sSUu2nUgaq2-mES6xuEzfrPXvtQ-jakzarwTRVeo-0Mr3UqSSbOE4EQHIQNVVL9nvqXCnZ6CfPO7LtUCR2h5gizR-HzvkIkcQl-4wr771auZc69Zz00U2OK3dG_gmJ-mPk1noTZjJFmQ0Xq7kG8o6fsBiifigEjUr0mhIPX3hnueRcyAiekbQ"/>
-                    <img alt="Amul Kool Rose Pack Bottle Right" class="h-44 w-auto object-contain opacity-80 scale-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8oT0IG3BcxSep-2mDLpYj06ryOb_EtMe2fI6T7CX-9WxFfN1MfmxYvMw-fBVPWwsK72vpkyG8akme46NKjdL04r_JsCJ-NpUQqaT1MfpNoMi_dNQrPNBP3IE2h4bGJ8489o4td8tc1iCCaET0urz1_EoNC_j_t0jGx8H479ZIKuR4zd4yMCj_N7rIob-vHUz2ji_EgR5xRtG1BbtjaD711k_tQOkrCtj-5YbzE3aJFfn-f-Kgyuvfy8BwXHKUElElA"/>
+                    <img alt="Amul Kool Rose Pack Bottle Left" class="h-44 w-auto object-contain opacity-80 scale-90"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9rid4lpLWUbGY0P7TJfUQ6twX-ln7YptPL-u0q-5p1MNAODQMSuQiopY1MFFsGJYuTx8hKjxaEjwOkNKIJoMuvNK1TWr1Q7vljMuQnAg_BB8qDSEjRXCYeDgJf7Jua13A_7QVSGfeBGaH-Ax3WZnI3H92plyHsRgeZbMQrvolO6TrQPxejxAWaRhnejQUtEk6sN8T4mTn1q5COs6L4CryfaI1t4Vd4rpJJghMGQmr_ChbedK5pJdkcbcOifXZQ_Qmkw" />
+                    <img alt="Amul Kool Rose Pack Bottle Center" class="h-52 w-auto object-contain z-10 drop-shadow-md"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhfIXQK9EYqIO5qGQKsd5PrtWBUksFziZJRH04SbPfBLvP1WwjglPqOnnWQCobzyb1BfyINIkefN0E9sSUu2nUgaq2-mES6xuEzfrPXvtQ-jakzarwTRVeo-0Mr3UqSSbOE4EQHIQNVVL9nvqXCnZ6CfPO7LtUCR2h5gizR-HzvkIkcQl-4wr771auZc69Zz00U2OK3dG_gmJ-mPk1noTZjJFmQ0Xq7kG8o6fsBiifigEjUr0mhIPX3hnueRcyAiekbQ" />
+                    <img alt="Amul Kool Rose Pack Bottle Right" class="h-44 w-auto object-contain opacity-80 scale-90"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB8oT0IG3BcxSep-2mDLpYj06ryOb_EtMe2fI6T7CX-9WxFfN1MfmxYvMw-fBVPWwsK72vpkyG8akme46NKjdL04r_JsCJ-NpUQqaT1MfpNoMi_dNQrPNBP3IE2h4bGJ8489o4td8tc1iCCaET0urz1_EoNC_j_t0jGx8H479ZIKuR4zd4yMCj_N7rIob-vHUz2ji_EgR5xRtG1BbtjaD711k_tQOkrCtj-5YbzE3aJFfn-f-Kgyuvfy8BwXHKUElElA" />
                   </div>
                 </div>
                 <div class="mt-5 flex items-center justify-between">
@@ -644,32 +713,44 @@
                 <div class="flex items-center justify-between rounded-full bg-surface-container px-3 py-1.5">
                   <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Quantity</span>
                   <div class="flex items-center gap-3">
-                    <button aria-label="Decrease" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-2', -1)" type="button">
+                    <button aria-label="Decrease"
+                      class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
+                      onclick="changeQty('qty-2', -1)" type="button">
                       <span class="material-symbols-outlined text-[16px]">remove</span>
                     </button>
-                    <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center" id="qty-2">1</span>
-                    <button aria-label="Increase" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-2', 1)" type="button">
+                    <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center"
+                      id="qty-2">1</span>
+                    <button aria-label="Increase"
+                      class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
+                      onclick="changeQty('qty-2', 1)" type="button">
                       <span class="material-symbols-outlined text-[16px]">add</span>
                     </button>
                   </div>
                 </div>
-                <button class="w-full py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2" onclick="notifyCart('Family Chill 6-Pack')" type="button">
+                <button
+                  class="w-full py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
+                  onclick="notifyCart('Family Chill 6-Pack')" type="button">
                   <span class="material-symbols-outlined text-[18px]">bolt</span>
                   <span>Express Buy 6-Pack</span>
                 </button>
               </div>
             </div>
             <!-- Pack 3: Crate -->
-            <div class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div
+              class="rounded-3xl bg-surface-container-lowest p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
               <div>
-                <div class="w-full h-56 rounded-2xl bg-surface-container-high/40 flex items-center justify-center p-4 relative overflow-hidden">
-                  <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-container font-label-sm text-label-sm font-bold shadow-sm">Bulk Savings</span>
+                <div
+                  class="w-full h-56 rounded-2xl bg-surface-container-high/40 flex items-center justify-center p-4 relative overflow-hidden">
+                  <span
+                    class="absolute top-3 left-3 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-container font-label-sm text-label-sm font-bold shadow-sm">Bulk
+                    Savings</span>
                   <!-- Multi icon arrangement -->
                   <div class="flex flex-col items-center justify-center text-center gap-2">
                     <div class="w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary">
                       <span class="material-symbols-outlined text-[36px]">inventory_2</span>
                     </div>
-                    <span class="font-label-sm text-label-sm text-on-surface font-semibold">24 Aseptic Safe Bottles</span>
+                    <span class="font-label-sm text-label-sm text-on-surface font-semibold">24 Aseptic Safe
+                      Bottles</span>
                   </div>
                 </div>
                 <div class="mt-5 flex items-center justify-between">
@@ -695,16 +776,23 @@
                 <div class="flex items-center justify-between rounded-full bg-surface-container px-3 py-1.5">
                   <span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Quantity</span>
                   <div class="flex items-center gap-3">
-                    <button aria-label="Decrease" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-3', -1)" type="button">
+                    <button aria-label="Decrease"
+                      class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
+                      onclick="changeQty('qty-3', -1)" type="button">
                       <span class="material-symbols-outlined text-[16px]">remove</span>
                     </button>
-                    <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center" id="qty-3">1</span>
-                    <button aria-label="Increase" class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors" onclick="changeQty('qty-3', 1)" type="button">
+                    <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center"
+                      id="qty-3">1</span>
+                    <button aria-label="Increase"
+                      class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
+                      onclick="changeQty('qty-3', 1)" type="button">
                       <span class="material-symbols-outlined text-[16px]">add</span>
                     </button>
                   </div>
                 </div>
-                <button class="w-full py-3.5 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2" onclick="notifyCart('Party & Festive Crate (24 x 180ml)')" type="button">
+                <button
+                  class="w-full py-3.5 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2"
+                  onclick="notifyCart('Party & Festive Crate (24 x 180ml)')" type="button">
                   <span class="material-symbols-outlined text-[18px]">local_shipping</span>
                   <span>Order Full Crate</span>
                 </button>
@@ -712,7 +800,9 @@
             </div>
           </div>
           <!-- Quick Delivery Notification Toast Placeholder -->
-          <div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3" id="cart-toast">
+          <div
+            class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none bg-inverse-surface text-inverse-on-surface px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3"
+            id="cart-toast">
             <span class="material-symbols-outlined text-secondary-fixed text-[22px]">check_circle</span>
             <span class="font-body-sm text-body-sm font-medium" id="cart-toast-text">Added to cart!</span>
           </div>
@@ -726,10 +816,12 @@
             <!-- Sliders & Flavour Profile Left -->
             <div class="lg:col-span-7 flex flex-col gap-8">
               <div>
-                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Sommelier Evaluation</span>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Sommelier
+                  Evaluation</span>
                 <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif mt-1">Sensory Tasting Notes</h2>
                 <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
-                  Formulated specifically to evoke traditional Indian wedding sherbet without cloying heaviness. Delicate, floral, and deeply quenching.
+                  Formulated specifically to evoke traditional Indian wedding sherbet without cloying heaviness.
+                  Delicate, floral, and deeply quenching.
                 </p>
               </div>
               <!-- Radar-style Sliders Bar Stack -->
@@ -744,9 +836,11 @@
                     <span class="text-primary font-bold">65%</span>
                   </div>
                   <div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-container rounded-full" style="width: 65%;"></div>
+                    <div class="h-full bg-gradient-to-r from-secondary to-secondary-container rounded-full"
+                      style="width: 65%;"></div>
                   </div>
-                  <span class="font-label-sm text-label-sm text-outline">Mild floral honey sweetness, zero synthetic bitter sugar trail.</span>
+                  <span class="font-label-sm text-label-sm text-outline">Mild floral honey sweetness, zero synthetic
+                    bitter sugar trail.</span>
                 </div>
                 <!-- 2 Rose Aroma -->
                 <div class="flex flex-col gap-2">
@@ -758,9 +852,11 @@
                     <span class="text-primary font-bold">90%</span>
                   </div>
                   <div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full" style="width: 90%;"></div>
+                    <div class="h-full bg-gradient-to-r from-primary to-primary-container rounded-full"
+                      style="width: 90%;"></div>
                   </div>
-                  <span class="font-label-sm text-label-sm text-outline">Distinct natural Damask petals bouquet upon cap opening.</span>
+                  <span class="font-label-sm text-label-sm text-outline">Distinct natural Damask petals bouquet upon cap
+                    opening.</span>
                 </div>
                 <!-- 3 Creaminess -->
                 <div class="flex flex-col gap-2">
@@ -772,9 +868,11 @@
                     <span class="text-primary font-bold">85%</span>
                   </div>
                   <div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-primary-fixed-dim to-primary rounded-full" style="width: 85%;"></div>
+                    <div class="h-full bg-gradient-to-r from-primary-fixed-dim to-primary rounded-full"
+                      style="width: 85%;"></div>
                   </div>
-                  <span class="font-label-sm text-label-sm text-outline">Smooth toned dairy body that coats the palate gently without oiliness.</span>
+                  <span class="font-label-sm text-label-sm text-outline">Smooth toned dairy body that coats the palate
+                    gently without oiliness.</span>
                 </div>
                 <!-- 4 Chill Factor -->
                 <div class="flex flex-col gap-2">
@@ -786,9 +884,11 @@
                     <span class="text-primary font-bold">100%</span>
                   </div>
                   <div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden">
-                    <div class="h-full bg-gradient-to-r from-primary-container to-primary rounded-full" style="width: 100%;"></div>
+                    <div class="h-full bg-gradient-to-r from-primary-container to-primary rounded-full"
+                      style="width: 100%;"></div>
                   </div>
-                  <span class="font-label-sm text-label-sm text-outline">Instant thermal comfort; cools body temperature on warm tropical days.</span>
+                  <span class="font-label-sm text-label-sm text-outline">Instant thermal comfort; cools body temperature
+                    on warm tropical days.</span>
                 </div>
               </div>
               <!-- Pairing Recommendations -->
@@ -818,11 +918,18 @@
             <!-- Glass Drink Imagery Right -->
             <div class="lg:col-span-5 relative flex justify-center">
               <div class="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl bg-surface-container">
-                <img alt="Cold rose milk served in restaurant setting with fresh mint and roses" class="w-full h-[520px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1cWPv1CQHmV9P5-SufM3cnUVu8qKtEQhbsHEY5J983YEHkJE-fj9M4kP_tadujluL_Z00_qWrUXEhjXcLBTL6aw0mmmxPd7KkADLA9a1g_k0H29DzKIXreUsarlascjesyKd7QrAZCN_5U8YsXAykAYlEc9sXDmz40sW2RM9fCV0Isjv6Edj_LK8xkClQqSB3zUjrHDusttMx3SNY6gJ2_rJkRpU0kq2bO5OehGR79F8hbmeW9_Oc"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent flex flex-col justify-end p-8 text-on-primary">
-                  <span class="font-label-sm text-label-sm text-secondary-fixed uppercase font-bold tracking-widest">Barista Recommendation</span>
-                  <p class="font-headline-sm text-headline-sm font-serif mt-1">Serve in tall fluted glass over crushed mountain ice</p>
-                  <p class="font-body-sm text-body-sm opacity-90 mt-2">Garnish with fresh crushed pistachios or edible rose petals for authentic heritage flair.</p>
+                <img alt="Cold rose milk served in restaurant setting with fresh mint and roses"
+                  class="w-full h-[520px] object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1cWPv1CQHmV9P5-SufM3cnUVu8qKtEQhbsHEY5J983YEHkJE-fj9M4kP_tadujluL_Z00_qWrUXEhjXcLBTL6aw0mmmxPd7KkADLA9a1g_k0H29DzKIXreUsarlascjesyKd7QrAZCN_5U8YsXAykAYlEc9sXDmz40sW2RM9fCV0Isjv6Edj_LK8xkClQqSB3zUjrHDusttMx3SNY6gJ2_rJkRpU0kq2bO5OehGR79F8hbmeW9_Oc" />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-on-background/70 via-transparent to-transparent flex flex-col justify-end p-8 text-on-primary">
+                  <span
+                    class="font-label-sm text-label-sm text-secondary-fixed uppercase font-bold tracking-widest">Barista
+                    Recommendation</span>
+                  <p class="font-headline-sm text-headline-sm font-serif mt-1">Serve in tall fluted glass over crushed
+                    mountain ice</p>
+                  <p class="font-body-sm text-body-sm opacity-90 mt-2">Garnish with fresh crushed pistachios or edible
+                    rose petals for authentic heritage flair.</p>
                 </div>
               </div>
             </div>
@@ -835,10 +942,12 @@
         <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
           <!-- Section Header -->
           <div class="max-w-2xl mx-auto text-center flex flex-col items-center gap-3 mb-16">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">100% Clean Dairy</span>
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">100% Clean
+              Dairy</span>
             <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">Nutritional Transparency</h2>
             <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Good health should never be a mystery. Powered entirely by authentic cow and buffalo milk from India's trusted farmer cooperative.
+              Good health should never be a mystery. Powered entirely by authentic cow and buffalo milk from India's
+              trusted farmer cooperative.
             </p>
           </div>
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -847,9 +956,11 @@
               <div class="flex items-center justify-between pb-4 border-b border-surface-container">
                 <div>
                   <h3 class="font-headline-sm text-headline-sm text-on-surface font-serif">Nutritional Facts Panel</h3>
-                  <p class="font-body-sm text-body-sm text-on-surface-variant">Serving Size: 1 Bottle (180 ml) | Servings per Pack: 1</p>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Serving Size: 1 Bottle (180 ml) |
+                    Servings per Pack: 1</p>
                 </div>
-                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
+                <div
+                  class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm font-bold">
                   Standardized Milk Base
                 </div>
               </div>
@@ -880,7 +991,8 @@
                   <span class="font-body-sm text-body-sm text-on-surface-variant">Lactose & Cane Sugar</span>
                 </div>
                 <div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-1">
-                  <span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Fortified Vitamins</span>
+                  <span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Fortified
+                    Vitamins</span>
                   <span class="font-headline-sm text-headline-sm text-secondary font-bold">Vit A & D</span>
                   <span class="font-body-sm text-body-sm text-on-surface-variant">Immunity & Bone Health</span>
                 </div>
@@ -889,7 +1001,9 @@
               <div class="mt-2 p-4 rounded-2xl bg-surface-container">
                 <h4 class="font-label-md text-label-md text-on-surface font-bold">Complete Ingredient List:</h4>
                 <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-                  Standardized Toned Milk, Sugar, Permitted Natural Rose Flavouring Substances, Natural Colour (INS 127), Fortified with Vitamin A (Retinyl Acetate) and Vitamin D (Cholecalciferol). No chemical preservatives added.
+                  Standardized Toned Milk, Sugar, Permitted Natural Rose Flavouring Substances, Natural Colour (INS
+                  127), Fortified with Vitamin A (Retinyl Acetate) and Vitamin D (Cholecalciferol). No chemical
+                  preservatives added.
                 </p>
               </div>
             </div>
@@ -901,12 +1015,14 @@
                     <div class="w-4 h-4 rounded-full bg-tertiary"></div>
                   </div>
                   <div class="flex flex-col">
-                    <span class="font-label-md text-label-md text-tertiary font-bold uppercase">100% Pure Vegetarian</span>
+                    <span class="font-label-md text-label-md text-tertiary font-bold uppercase">100% Pure
+                      Vegetarian</span>
                     <span class="font-label-sm text-label-sm text-outline">Green Dot Guarantee</span>
                   </div>
                 </div>
                 <p class="font-body-sm text-body-sm text-on-surface-variant">
-                  Every unit is manufactured under stringent dairy sanitation protocols certified by the Government of India.
+                  Every unit is manufactured under stringent dairy sanitation protocols certified by the Government of
+                  India.
                 </p>
               </div>
               <div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
@@ -918,7 +1034,8 @@
                   </div>
                 </div>
                 <p class="font-body-sm text-body-sm text-on-surface-variant">
-                  Produced at state-of-the-art cooperative automated dairies equipped with microbiological testing at every batch stage.
+                  Produced at state-of-the-art cooperative automated dairies equipped with microbiological testing at
+                  every batch stage.
                 </p>
               </div>
               <div class="p-6 rounded-3xl bg-surface-container-lowest shadow-sm flex flex-col gap-4">
@@ -944,43 +1061,60 @@
           <!-- Section Header with Aggregate rating -->
           <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
-              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Real Customer Love</span>
-              <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif mt-1">Loved Across Every Generation</h2>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Real Customer
+                Love</span>
+              <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif mt-1">Loved Across Every
+                Generation</h2>
             </div>
             <div class="flex items-center gap-4 p-4 rounded-2xl bg-surface-container-low shadow-sm">
               <div class="font-display-hero text-[44px] leading-none text-primary font-bold">4.9</div>
               <div class="flex flex-col">
                 <div class="flex text-secondary">
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[20px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <span class="font-label-sm text-label-sm text-outline font-semibold">14,280+ Verified Indian Buyers</span>
+                <span class="font-label-sm text-label-sm text-outline font-semibold">14,280+ Verified Indian
+                  Buyers</span>
               </div>
             </div>
           </div>
           <!-- Testimonial Cards Grid -->
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- Review 1 -->
-            <div class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div
+              class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
               <div class="flex flex-col gap-4">
                 <div class="flex text-secondary">
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Tastes exactly like royal summer weddings!"</p>
+                <p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Tastes exactly like royal
+                  summer weddings!"</p>
                 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                  Most rose milk drinks in India are filled with sickening synthetic chemical syrup. Amul Kool Rose has the actual delicate aroma of real petals and real thick creamy milk.
+                  Most rose milk drinks in India are filled with sickening synthetic chemical syrup. Amul Kool Rose has
+                  the actual delicate aroma of real petals and real thick creamy milk.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">
+                  <div
+                    class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center font-bold text-primary">
                     AP
                   </div>
                   <div class="flex flex-col">
@@ -992,23 +1126,32 @@
               </div>
             </div>
             <!-- Review 2 -->
-            <div class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div
+              class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
               <div class="flex flex-col gap-4">
                 <div class="flex text-secondary">
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Our fridge never runs out of the 6-pack."</p>
+                <p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Our fridge never runs out of
+                  the 6-pack."</p>
                 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                  My kids come back exhausted from sports coaching in the heat and grab one straight from the chiller. It gives them genuine dairy calcium without artificial sodas.
+                  My kids come back exhausted from sports coaching in the heat and grab one straight from the chiller.
+                  It gives them genuine dairy calcium without artificial sodas.
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-secondary">
+                  <div
+                    class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-secondary">
                     RV
                   </div>
                   <div class="flex flex-col">
@@ -1020,23 +1163,32 @@
               </div>
             </div>
             <!-- Review 3 -->
-            <div class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+            <div
+              class="p-8 rounded-3xl bg-surface-container-low shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
               <div class="flex flex-col gap-4">
                 <div class="flex text-secondary">
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-                  <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="material-symbols-outlined text-[18px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
                 </div>
-                <p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Secret ingredient in my homemade faloodas."</p>
+                <p class="font-headline-sm text-headline-sm text-on-surface font-serif">"Secret ingredient in my
+                  homemade faloodas."</p>
                 <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                  Pour this over soaked sabja seeds, falooda noodles, and a scoop of vanilla ice cream. Restaurant-quality dessert ready in 60 seconds flat!
+                  Pour this over soaked sabja seeds, falooda noodles, and a scoop of vanilla ice cream.
+                  Restaurant-quality dessert ready in 60 seconds flat!
                 </p>
               </div>
               <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between">
                 <div class="flex items-center gap-3">
-                  <div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-tertiary">
+                  <div
+                    class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center font-bold text-tertiary">
                     SG
                   </div>
                   <div class="flex flex-col">
@@ -1049,17 +1201,21 @@
             </div>
           </div>
           <!-- Social UGC Gallery Banner -->
-          <div class="mt-16 p-8 rounded-3xl bg-surface-container-high/60 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div
+            class="mt-16 p-8 rounded-3xl bg-surface-container-high/60 flex flex-col md:flex-row items-center justify-between gap-6">
             <div class="flex items-center gap-4">
               <div class="w-12 h-12 rounded-2xl bg-primary text-on-primary flex items-center justify-center">
                 <span class="material-symbols-outlined text-[26px]">photo_camera</span>
               </div>
               <div>
-                <h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Share your chilling moment on Instagram</h4>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">Tag @Amul_Coop with hashtag #MyKoolMoment for a chance to win a monthly festive crate.</p>
+                <h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Share your chilling moment
+                  on Instagram</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Tag @Amul_Coop with hashtag #MyKoolMoment
+                  for a chance to win a monthly festive crate.</p>
               </div>
             </div>
-            <a class="px-6 py-3 rounded-full bg-surface-container-lowest hover:bg-surface text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-2" href="#packs">
+            <a class="px-6 py-3 rounded-full bg-surface-container-lowest hover:bg-surface text-on-surface font-label-md text-label-md shadow-sm transition-all flex items-center gap-2"
+              href="#packs">
               <span>Explore UGC Wall</span>
               <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
             </a>
@@ -1072,49 +1228,77 @@
         <div class="max-w-4xl mx-auto px-margin-mobile lg:px-margin">
           <!-- Section Header -->
           <div class="text-center flex flex-col items-center gap-3 mb-12">
-            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Got Questions?</span>
-            <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">Frequently Asked Questions & Tips</h2>
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Got
+              Questions?</span>
+            <h2 class="font-headline-lg text-headline-lg text-on-surface font-serif">Frequently Asked Questions & Tips
+            </h2>
           </div>
           <!-- Accordion List -->
           <div class="flex flex-col gap-4">
             <!-- FAQ 1 -->
-            <details class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer" open="">
-              <summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
+            <details
+              class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer"
+              open="">
+              <summary
+                class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
                 <span>How should I store Amul Kool Rose before opening?</span>
-                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                <span
+                  class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
               </summary>
-              <div class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Thanks to Amul’s advanced UHT (Ultra High Temperature) aseptic processing and multi-barrier hermetic sealing, unopened bottles can be safely stored at ambient room temperature in a cool, dry place for up to 180 days. However, for the true royal experience, we highly recommend chilling it in the refrigerator at 4°C for at least 2 hours before drinking.
+              <div
+                class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Thanks to Amul’s advanced UHT (Ultra High Temperature) aseptic processing and multi-barrier hermetic
+                sealing, unopened bottles can be safely stored at ambient room temperature in a cool, dry place for up
+                to 180 days. However, for the true royal experience, we highly recommend chilling it in the refrigerator
+                at 4°C for at least 2 hours before drinking.
               </div>
             </details>
             <!-- FAQ 2 -->
-            <details class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
-              <summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
+            <details
+              class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
+              <summary
+                class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
                 <span>Is Amul Kool made with real fresh milk?</span>
-                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                <span
+                  class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
               </summary>
-              <div class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Yes, absolutely. Amul Kool contains 100% standardized pure cooperative dairy milk. Unlike powdered recreations or oil-stabilized non-dairy drinks, Amul Kool retains natural dairy nutrients including complete milk protein, vitamin B12, and bio-available calcium.
+              <div
+                class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                Yes, absolutely. Amul Kool contains 100% standardized pure cooperative dairy milk. Unlike powdered
+                recreations or oil-stabilized non-dairy drinks, Amul Kool retains natural dairy nutrients including
+                complete milk protein, vitamin B12, and bio-available calcium.
               </div>
             </details>
             <!-- FAQ 3 -->
-            <details class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
-              <summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
+            <details
+              class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
+              <summary
+                class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
                 <span>Can Amul Kool Rose be used in desserts or served warm?</span>
-                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                <span
+                  class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
               </summary>
-              <div class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                While designed to be enjoyed ice-cold, it is a versatile culinary delight! You can use it as a flavorful base for royal Rose Kheer, pour it over chilled Falooda vermicelli, blend it into rose ice-cream smoothies, or gently warm it during cold winter evenings for a calming floral nightcap.
+              <div
+                class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                While designed to be enjoyed ice-cold, it is a versatile culinary delight! You can use it as a flavorful
+                base for royal Rose Kheer, pour it over chilled Falooda vermicelli, blend it into rose ice-cream
+                smoothies, or gently warm it during cold winter evenings for a calming floral nightcap.
               </div>
             </details>
             <!-- FAQ 4 -->
-            <details class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
-              <summary class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
+            <details
+              class="group p-6 rounded-2xl bg-surface-container-lowest shadow-sm transition-all open:shadow-md cursor-pointer">
+              <summary
+                class="flex items-center justify-between font-headline-sm text-headline-sm text-on-surface font-serif list-none">
                 <span>Are there any added artificial preservatives in this drink?</span>
-                <span class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
+                <span
+                  class="material-symbols-outlined text-primary group-open:rotate-180 transition-transform">expand_more</span>
               </summary>
-              <div class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                None. Zero chemical preservatives like sodium benzoate or potassium sorbate are added. The drink’s shelf-life is achieved strictly through thermal aseptic sterilization and hermetic barrier packaging, guaranteeing pure and wholesome indulgence.
+              <div
+                class="mt-4 pt-3 border-t border-surface-container font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                None. Zero chemical preservatives like sodium benzoate or potassium sorbate are added. The drink’s
+                shelf-life is achieved strictly through thermal aseptic sterilization and hermetic barrier packaging,
+                guaranteeing pure and wholesome indulgence.
               </div>
             </details>
           </div>
@@ -1126,17 +1310,22 @@
         <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
           <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div class="flex flex-col gap-2 max-w-xl text-center lg:text-left">
-              <span class="font-label-sm text-label-sm text-secondary-fixed uppercase font-bold tracking-widest">Craving Instant Refreshment?</span>
-              <h2 class="font-headline-lg text-headline-lg font-serif">Get Chilled Amul Kool Rose Delivered in Minutes</h2>
+              <span class="font-label-sm text-label-sm text-secondary-fixed uppercase font-bold tracking-widest">Craving
+                Instant Refreshment?</span>
+              <h2 class="font-headline-lg text-headline-lg font-serif">Get Chilled Amul Kool Rose Delivered in Minutes
+              </h2>
               <p class="font-body-md text-body-md opacity-90">
-                Available at 1,00,000+ retail stores, Amul Preferred Outlets, railway kiosks, and top grocery quick-commerce apps nationwide.
+                Available at 1,00,000+ retail stores, Amul Preferred Outlets, railway kiosks, and top grocery
+                quick-commerce apps nationwide.
               </p>
             </div>
             <div class="flex flex-wrap items-center justify-center gap-4">
-              <a class="px-8 py-4 rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-xl hover:bg-surface transition-all" href="#packs">
+              <a class="px-8 py-4 rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-xl hover:bg-surface transition-all"
+                href="#packs">
                 Order Direct Online
               </a>
-              <a class="px-6 py-4 rounded-full bg-on-primary/15 hover:bg-on-primary/25 backdrop-blur-md text-on-primary font-label-lg text-label-lg transition-all flex items-center gap-2" href="#packs">
+              <a class="px-6 py-4 rounded-full bg-on-primary/15 hover:bg-on-primary/25 backdrop-blur-md text-on-primary font-label-lg text-label-lg transition-all flex items-center gap-2"
+                href="#packs">
                 <span class="material-symbols-outlined text-[20px]">near_me</span>
                 <span>Locate Nearest Amul Parlour</span>
               </a>
@@ -1155,11 +1344,14 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-y-12 lg:gap-x-12">
         <div class="lg:col-span-4 flex flex-col gap-4">
           <div class="flex items-center gap-3">
-            <img alt="Amul Kool Exotic Rose Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VfNlnFgAH_aVRPIxI2Pw83pRpzfyhNPbmb3LIv1GTQpUHi-jZoIYOwLUDjm4bu2_uDJJZcyoy5i6fCxUiQ7HKZysuNvyo2ett4hZyCwh84pzesnEYAQLZpQIAj217FzWOLjGRYplFL7MZghrR7TbGy3Ex-1F4YvGVCNsreuqJ0lkC-RSd3jF-63L61AVi8BtwHKViUmQnRyCmKzpMn2oKaT8b4sCwCr2vfm0bKVrsicyuisUftJqc8IYg"/>
+            <img alt="Amul Kool Exotic Rose Logo" class="h-8 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1VfNlnFgAH_aVRPIxI2Pw83pRpzfyhNPbmb3LIv1GTQpUHi-jZoIYOwLUDjm4bu2_uDJJZcyoy5i6fCxUiQ7HKZysuNvyo2ett4hZyCwh84pzesnEYAQLZpQIAj217FzWOLjGRYplFL7MZghrR7TbGy3Ex-1F4YvGVCNsreuqJ0lkC-RSd3jF-63L61AVi8BtwHKViUmQnRyCmKzpMn2oKaT8b4sCwCr2vfm0bKVrsicyuisUftJqc8IYg" />
             <span class="font-headline-sm text-headline-sm text-primary tracking-tight">Amul Kool Exotic Rose</span>
           </div>
           <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Born from India's pioneering dairy cooperative heritage, Amul Kool Exotic Rose marries wholesome, nutrient-dense fresh milk with delicate Damask rose petals. Crafted for celebration, refreshment, and royal sweetness in every sip.
+            Born from India's pioneering dairy cooperative heritage, Amul Kool Exotic Rose marries wholesome,
+            nutrient-dense fresh milk with delicate Damask rose petals. Crafted for celebration, refreshment, and royal
+            sweetness in every sip.
           </p>
           <div class="flex items-center gap-3 mt-2">
             <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
@@ -1178,18 +1370,24 @@
         <div class="lg:col-span-2 flex flex-col gap-3">
           <h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Quick Explore</h4>
           <nav class="flex flex-col gap-2.5">
-            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#hero-scroll">The Rose Story</a>
-            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#botanical-journey">Natural Ingredients</a>
-            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#packs">Pack Options</a>
-            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#reviews">Verified Reviews</a>
-            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#faq">FAQs</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+              href="#hero-scroll">The Rose Story</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+              href="#botanical-journey">Natural Ingredients</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+              href="#packs">Pack Options</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+              href="#reviews">Verified Reviews</a>
+            <a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors"
+              href="#faq">FAQs</a>
           </nav>
         </div>
 
         <div class="lg:col-span-3 flex flex-col gap-3">
           <h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Nutritional Promise</h4>
           <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-            Rich in wholesome dairy calcium, natural vitamins, and floral botanicals. Produced in world-class cooperative dairy units ensuring farm-fresh purity without artificial preservatives.
+            Rich in wholesome dairy calcium, natural vitamins, and floral botanicals. Produced in world-class
+            cooperative dairy units ensuring farm-fresh purity without artificial preservatives.
           </p>
           <div class="mt-1 flex flex-col gap-1.5">
             <div class="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm">
@@ -1209,12 +1407,18 @@
 
         <div class="lg:col-span-3 flex flex-col gap-4">
           <h4 class="font-label-lg text-label-lg text-on-surface uppercase tracking-wider">Join The Kool Club</h4>
-          <p class="font-body-sm text-body-sm text-on-surface-variant">Get early access to exclusive exotic drops, dairy recipes, and seasonal celebration bundles.</p>
-          <form class="flex flex-col gap-2.5" onsubmit="event.preventDefault(); notifyCart('Subscription Confirmed! Welcome to Kool Club.');">
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Get early access to exclusive exotic drops, dairy
+            recipes, and seasonal celebration bundles.</p>
+          <form class="flex flex-col gap-2.5"
+            onsubmit="event.preventDefault(); notifyCart('Subscription Confirmed! Welcome to Kool Club.');">
             <div class="relative w-full">
-              <input class="w-full h-12 px-4 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Enter your email address" type="email" required/>
+              <input
+                class="w-full h-12 px-4 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container"
+                placeholder="Enter your email address" type="email" required />
             </div>
-            <button class="w-full h-11 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2 shadow-sm" type="submit">
+            <button
+              class="w-full h-11 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-all flex items-center justify-center gap-2 shadow-sm"
+              type="submit">
               <span>Subscribe Now</span>
               <span class="material-symbols-outlined text-[18px]">send</span>
             </button>
@@ -1222,15 +1426,19 @@
           <div class="flex items-center gap-3 mt-1">
             <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Follow Us:</span>
             <div class="flex items-center gap-2">
-              <span class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">public</span>
-              <span class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">share</span>
-              <span class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">forum</span>
+              <span
+                class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">public</span>
+              <span
+                class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">share</span>
+              <span
+                class="material-symbols-outlined text-[20px] text-on-surface-variant hover:text-primary cursor-pointer transition-colors">forum</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant border-t border-surface-container">
+      <div
+        class="mt-space-xl pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant border-t border-surface-container">
         <p>© 2026 Gujarat Co-operative Milk Marketing Federation Ltd. (Amul). All rights reserved.</p>
         <div class="flex items-center gap-6 font-label-sm text-label-sm">
           <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
@@ -1240,7 +1448,80 @@
       </div>
     </div>
   </footer>
+  <!-- ORDER / BASKET MODAL -->
+  <div id="order-modal" class="modal-backdrop">
 
+    <div class="modal-card">
+
+      <button id="modal-close-btn" class="modal-close" type="button">
+        ×
+      </button>
+
+      <div class="modal-header">
+        <span class="modal-eyebrow">CHILLED DELIVERY</span>
+
+        <h2>Order Your Rose Milk</h2>
+
+        <p>
+          Freshly chilled and dispatched from the nearest Amul depot.
+        </p>
+      </div>
+
+      <div class="modal-product">
+        <div>
+          <span class="modal-label">PRODUCT</span>
+          <h3 id="modal-item-title">Amul Royale Rose Milk</h3>
+        </div>
+
+        <div>
+          <span class="modal-label">PRICE</span>
+          <strong id="modal-item-price">₹30</strong>
+        </div>
+      </div>
+
+      <div class="modal-quantity">
+        <span>Quantity</span>
+
+        <div class="quantity-control">
+          <button id="qty-minus" type="button">−</button>
+          <span id="qty-val">1</span>
+          <button id="qty-plus" type="button">+</button>
+        </div>
+      </div>
+
+      <div class="modal-delivery">
+        <label for="pincode-input">Check delivery</label>
+
+        <div class="pincode-row">
+          <input id="pincode-input" type="text" inputmode="numeric" maxlength="6" placeholder="Enter PIN code" />
+
+          <button id="pincode-check-btn" type="button">
+            Check
+          </button>
+        </div>
+
+        <p id="pincode-status" class="pincode-status"></p>
+      </div>
+
+      <div class="modal-summary">
+        <div>
+          <span>Subtotal</span>
+          <strong id="summary-subtotal">₹30</strong>
+        </div>
+
+        <div class="modal-total">
+          <span>Total</span>
+          <strong id="summary-total">₹30</strong>
+        </div>
+      </div>
+
+      <button id="confirm-order-btn" class="modal-confirm-btn" type="button">
+        Confirm Order
+      </button>
+
+    </div>
+
+  </div>
   <!-- INLINE CART INTERACTIVITY SCRIPT (from code.html) -->
   <script>
     function changeQty(id, delta) {
@@ -1269,4 +1550,5 @@
   <!-- Main Animation Script -->
   <script src="script.js"></script>
 </body>
+
 </html>
