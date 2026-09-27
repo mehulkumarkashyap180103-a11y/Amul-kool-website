@@ -1166,6 +1166,8 @@ body {
 .modal-card {
   width: 100%;
   max-width: 480px;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
   background: #1c0c14;
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-lg);
@@ -1174,6 +1176,20 @@ body {
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
   transform: translateY(20px) scale(0.96);
   transition: all var(--transition-fast);
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal-card::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-card::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-pill);
 }
 
 .modal-backdrop.show .modal-card {
