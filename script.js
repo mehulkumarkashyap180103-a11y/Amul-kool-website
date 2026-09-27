@@ -38,20 +38,7 @@
   const soundToggleBtn = document.getElementById('sound-toggle-btn');
   const soundLabel = document.getElementById('sound-label');
 
-  // Modal & Cart
-  const orderModal = document.getElementById('order-modal');
-  const orderModalTrigger = document.getElementById('order-modal-trigger');
-  const ctaQuickBuy = document.getElementById('cta-quick-buy');
-  const modalCloseBtn = document.getElementById('modal-close-btn');
-  const qtyMinus = document.getElementById('qty-minus');
-  const qtyPlus = document.getElementById('qty-plus');
-  const qtyVal = document.getElementById('qty-val');
-  const summarySubtotal = document.getElementById('summary-subtotal');
-  const summaryTotal = document.getElementById('summary-total');
-  const confirmOrderBtn = document.getElementById('confirm-order-btn');
-  const pincodeInput = document.getElementById('pincode-input');
-  const pincodeCheckBtn = document.getElementById('pincode-check-btn');
-  const pincodeStatus = document.getElementById('pincode-status');
+  // Toast Portal (shared with cart-ui.js)
   const toastPortal = document.getElementById('toast-portal');
 
   // --- STATE ---
@@ -65,8 +52,6 @@
   let isAudioPlaying = false;
   let audioOscillators = [];
   let audioGainNode = null;
-  let cartQuantity = 1;
-  const ITEM_BASE_PRICE = 45;
 
   // --- HELPER: FRAME FILENAME PADDING ---
   function getFrameUrl(index) {
@@ -129,6 +114,7 @@
     
     canvas.width = rect.width * dpr;
     canvas.height = rect.height * dpr;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.scale(dpr, dpr);
     
     // Force redraw of current frame
@@ -426,131 +412,7 @@
     }
   }
 
-  // --- 10. MODAL & CART INTERACTION ---
-  function openOrderModal(flavorName = 'Amul Royale Rose Milk', price = 45) {
-    document.getElementById('modal-item-title').textContent = flavorName;
-    document.getElementById('modal-item-price').textContent = `₹${price}`;
-    cartQuantity = 1;
-    qtyVal.textContent = cartQuantity;
-    updateCartCalculations(price);
-    orderModal.classList.add('show');
-    playSoftChime(640);
-  }
-
-  function closeOrderModal() {
-    orderModal.classList.remove('show');
-  }
-
-  function updateCartCalculations(unitPrice = 45) {
-    const total = cartQuantity * unitPrice;
-    summarySubtotal.textContent = `₹${total}`;
-    summaryTotal.textContent = `₹${total}`;
-  }
-
-  if (qtyPlus) {
-    qtyPlus.addEventListener('click', () => {
-      cartQuantity++;
-      qtyVal.textContent = cartQuantity;
-      updateCartCalculations();
-      playSoftChime(580);
-    });
-  }
-
-  if (qtyMinus) {
-    qtyMinus.addEventListener('click', () => {
-      if (cartQuantity > 1) {
-        cartQuantity--;
-        qtyVal.textContent = cartQuantity;
-        updateCartCalculations();
-        playSoftChime(420);
-      }
-    });
-  }
-
-  if (orderModalTrigger) orderModalTrigger.addEventListener('click', () => openOrderModal());
-  if (ctaQuickBuy) ctaQuickBuy.addEventListener('click', () => openOrderModal());
-  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeOrderModal);
-
-  // Close modal on outside click
-  window.addEventListener('click', (e) => {
-    if (e.target === orderModal) closeOrderModal();
-  });
-
-  // Pincode Verification Simulation
-  if (pincodeCheckBtn && pincodeInput) {
-    pincodeCheckBtn.addEventListener('click', () => {
-      const code = pincodeInput.value.trim();
-      if (/^\d{6}$/.test(code)) {
-        pincodeStatus.className = 'pincode-status valid';
-        pincodeStatus.textContent = '✓ Express Chilled Delivery in 30 mins available!';
-      } else {
-        pincodeStatus.className = 'pincode-status invalid';
-        pincodeStatus.textContent = '⚠ Please enter a valid 6-digit Indian PIN code';
-      }
-    });
-  }
-
-  // Confirm order
-  // Confirm order - send order to backend
-if (confirmOrderBtn) {
-  confirmOrderBtn.addEventListener('click', async () => {
-    const product = document.getElementById('modal-item-title').textContent;
-    const priceText = document.getElementById('modal-item-price').textContent;
-    const price = Number(priceText.replace('₹', '').trim());
-    const quantity = cartQuantity;
-    const total = quantity * price;
-
-    const pincode = pincodeInput ? pincodeInput.value.trim() : '';
-
-    try {
-      confirmOrderBtn.disabled = true;
-      confirmOrderBtn.textContent = 'Processing...';
-
-      const response = await fetch('/api/order', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          product,
-          quantity,
-          price,
-          total,
-          pincode
-        })
-      });
-
-      const data = await response.json();
-
-      if (!response.ok || !data.success) {
-        throw new Error(data.message || 'Order failed');
-      }
-
-      closeOrderModal();
-
-      showToast(
-        '🎉 Order received successfully!',
-        'success'
-      );
-
-      playSoftChime(880);
-
-      console.log('Backend response:', data);
-
-    } catch (error) {
-      console.error('Order error:', error);
-
-      showToast(
-        '⚠️ Something went wrong. Please try again.',
-        'error'
-      );
-
-    } finally {
-      confirmOrderBtn.disabled = false;
-      confirmOrderBtn.innerHTML = 'Confirm Order';
-    }
-  });
-}
+  // --- 10. CART INTERACTION (handled by cart-ui.js) ---
 
   // Replay Flow Button
   const replayBtn = document.getElementById('replay-btn');
@@ -582,6 +444,7 @@ if (confirmOrderBtn) {
 
   // --- 11. TOAST PORTAL NOTIFICATIONS ---
   function showToast(message, type = 'info') {
+    if (!toastPortal) return;
     const toast = document.createElement('div');
     toast.className = `toast-item toast-${type}`;
     toast.innerHTML = `<span>${message}</span>`;

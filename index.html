@@ -130,6 +130,9 @@
 
   <!-- Core Animation Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
 
 <body class="bg-surface font-body-md text-on-surface antialiased">
@@ -647,21 +650,21 @@
                   <div class="flex items-center gap-3">
                     <button aria-label="Decrease"
                       class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
-                      onclick="changeQty('qty-1', -1)" type="button">
+                      data-qty-control="qty-1" data-delta="-1" type="button">
                       <span class="material-symbols-outlined text-[16px]">remove</span>
                     </button>
                     <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center"
                       id="qty-1">1</span>
                     <button aria-label="Increase"
                       class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
-                      onclick="changeQty('qty-1', 1)" type="button">
+                      data-qty-control="qty-1" data-delta="1" type="button">
                       <span class="material-symbols-outlined text-[16px]">add</span>
                     </button>
                   </div>
                 </div>
                 <button
                   class="w-full py-3.5 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2"
-                  onclick="notifyCart('On-the-Go Single (180ml)')" type="button">
+                  data-add-to-cart="single" type="button">
                   <span class="material-symbols-outlined text-[18px]">add_shopping_cart</span>
                   <span>Add to Cart</span>
                 </button>
@@ -715,21 +718,21 @@
                   <div class="flex items-center gap-3">
                     <button aria-label="Decrease"
                       class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
-                      onclick="changeQty('qty-2', -1)" type="button">
+                      data-qty-control="qty-2" data-delta="-1" type="button">
                       <span class="material-symbols-outlined text-[16px]">remove</span>
                     </button>
                     <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center"
                       id="qty-2">1</span>
                     <button aria-label="Increase"
                       class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
-                      onclick="changeQty('qty-2', 1)" type="button">
+                      data-qty-control="qty-2" data-delta="1" type="button">
                       <span class="material-symbols-outlined text-[16px]">add</span>
                     </button>
                   </div>
                 </div>
                 <button
                   class="w-full py-3.5 rounded-full bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-md text-label-md transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2"
-                  onclick="notifyCart('Family Chill 6-Pack')" type="button">
+                  data-add-to-cart="family-pack" type="button">
                   <span class="material-symbols-outlined text-[18px]">bolt</span>
                   <span>Express Buy 6-Pack</span>
                 </button>
@@ -778,21 +781,21 @@
                   <div class="flex items-center gap-3">
                     <button aria-label="Decrease"
                       class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
-                      onclick="changeQty('qty-3', -1)" type="button">
+                      data-qty-control="qty-3" data-delta="-1" type="button">
                       <span class="material-symbols-outlined text-[16px]">remove</span>
                     </button>
                     <span class="font-label-md text-label-md font-bold text-on-surface min-w-[16px] text-center"
                       id="qty-3">1</span>
                     <button aria-label="Increase"
                       class="w-7 h-7 rounded-full bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors"
-                      onclick="changeQty('qty-3', 1)" type="button">
+                      data-qty-control="qty-3" data-delta="1" type="button">
                       <span class="material-symbols-outlined text-[16px]">add</span>
                     </button>
                   </div>
                 </div>
                 <button
                   class="w-full py-3.5 rounded-full bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md transition-all flex items-center justify-center gap-2"
-                  onclick="notifyCart('Party & Festive Crate (24 x 180ml)')" type="button">
+                  data-add-to-cart="party-crate" type="button">
                   <span class="material-symbols-outlined text-[18px]">local_shipping</span>
                   <span>Order Full Crate</span>
                 </button>
@@ -1410,7 +1413,7 @@
           <p class="font-body-sm text-body-sm text-on-surface-variant">Get early access to exclusive exotic drops, dairy
             recipes, and seasonal celebration bundles.</p>
           <form class="flex flex-col gap-2.5"
-            onsubmit="event.preventDefault(); notifyCart('Subscription Confirmed! Welcome to Kool Club.');">
+            onsubmit="event.preventDefault();">
             <div class="relative w-full">
               <input
                 class="w-full h-12 px-4 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container"
@@ -1460,58 +1463,78 @@
       <div class="modal-header">
         <span class="modal-eyebrow">CHILLED DELIVERY</span>
 
-        <h2>Order Your Rose Milk</h2>
+        <h2>Your Basket</h2>
 
         <p>
           Freshly chilled and dispatched from the nearest Amul depot.
         </p>
       </div>
 
-      <div class="modal-product">
-        <div>
-          <span class="modal-label">PRODUCT</span>
-          <h3 id="modal-item-title">Amul Royale Rose Milk</h3>
+      <!-- Empty state -->
+      <div id="cart-empty-state" class="cart-empty-state">
+        <span class="material-symbols-outlined" style="font-size:48px;color:var(--text-muted);">shopping_basket</span>
+        <p>Your basket is empty.</p>
+        <p class="cart-empty-sub">Add some chilled Rose Milk packs to get started.</p>
+      </div>
+
+      <!-- Cart line items (rendered by cart-ui.js) -->
+      <div id="cart-lines" class="cart-lines-container"></div>
+
+      <!-- Customer information -->
+      <div id="cart-customer-section" class="cart-customer-section">
+        <h3 class="cart-section-title">Delivery Details</h3>
+
+        <div class="cart-form-grid">
+          <div class="cart-form-field">
+            <label for="cust-name">Full Name</label>
+            <input id="cust-name" type="text" autocomplete="name" placeholder="Your name" />
+          </div>
+          <div class="cart-form-field">
+            <label for="cust-phone">Phone Number</label>
+            <input id="cust-phone" type="tel" inputmode="numeric" maxlength="10" autocomplete="tel" placeholder="10-digit mobile" />
+          </div>
         </div>
 
-        <div>
-          <span class="modal-label">PRICE</span>
-          <strong id="modal-item-price">₹30</strong>
+        <div class="cart-form-field">
+          <label for="cust-email">Email <span class="cart-optional">(optional)</span></label>
+          <input id="cust-email" type="email" autocomplete="email" placeholder="you@example.com" />
+        </div>
+
+        <div class="cart-form-field">
+          <label for="cust-address">Delivery Address</label>
+          <textarea id="cust-address" rows="2" autocomplete="street-address" placeholder="House no, street, area, city"></textarea>
+        </div>
+
+        <div class="modal-delivery">
+          <label for="pincode-input">Check delivery</label>
+
+          <div class="pincode-row">
+            <input id="pincode-input" type="text" inputmode="numeric" maxlength="6" placeholder="Enter PIN code" />
+
+            <button id="pincode-check-btn" type="button">
+              Check
+            </button>
+          </div>
+
+          <p id="pincode-status" class="pincode-status"></p>
         </div>
       </div>
 
-      <div class="modal-quantity">
-        <span>Quantity</span>
-
-        <div class="quantity-control">
-          <button id="qty-minus" type="button">−</button>
-          <span id="qty-val">1</span>
-          <button id="qty-plus" type="button">+</button>
-        </div>
-      </div>
-
-      <div class="modal-delivery">
-        <label for="pincode-input">Check delivery</label>
-
-        <div class="pincode-row">
-          <input id="pincode-input" type="text" inputmode="numeric" maxlength="6" placeholder="Enter PIN code" />
-
-          <button id="pincode-check-btn" type="button">
-            Check
-          </button>
-        </div>
-
-        <p id="pincode-status" class="pincode-status"></p>
-      </div>
-
-      <div class="modal-summary">
+      <!-- Summary -->
+      <div id="cart-summary-section" class="modal-summary">
         <div>
           <span>Subtotal</span>
-          <strong id="summary-subtotal">₹30</strong>
+          <strong id="summary-subtotal">₹0</strong>
+        </div>
+
+        <div>
+          <span>Delivery</span>
+          <strong class="free-text">Free</strong>
         </div>
 
         <div class="modal-total">
           <span>Total</span>
-          <strong id="summary-total">₹30</strong>
+          <strong id="summary-total">₹0</strong>
         </div>
       </div>
 
@@ -1522,86 +1545,16 @@
     </div>
 
   </div>
-  <!-- INLINE CART INTERACTIVITY SCRIPT (from code.html) -->
-  <script>
-    function changeQty(id, delta) {
-      const el = document.getElementById(id);
-      if (!el) return;
-      let val = parseInt(el.textContent, 10) || 1;
-      val = Math.max(1, Math.min(99, val + delta));
-      el.textContent = val;
-    }
-
-    let basketItems = 0;
-    let basketTotal = 30;
-
-    function notifyCart(productName) {
-      const toast = document.getElementById('cart-toast');
-      const toastText = document.getElementById('cart-toast-text');
-      const basketButton = document.getElementById('order-modal-trigger');
-
-      let price = 30;
-      let quantity = 1;
-
-      if (productName.includes('On-the-Go Single')) {
-        price = 30;
-        const qty = document.getElementById('qty-1');
-        quantity = parseInt(qty?.textContent, 10) || 1;
-      }
-      else if (productName.includes('Family Chill 6-Pack')) {
-        price = 170;
-        const qty = document.getElementById('qty-2');
-        quantity = parseInt(qty?.textContent, 10) || 1;
-      }
-      else if (productName.includes('Party & Festive Crate')) {
-        price = 650;
-        const qty = document.getElementById('qty-3');
-        quantity = parseInt(qty?.textContent, 10) || 1;
-      }
-
-      basketItems += quantity;
-      basketTotal += price * quantity;
-
-      if (basketButton) {
-        const basketText = basketButton.querySelector('span');
-        if (basketText) {
-          basketText.textContent = `🛒 Basket • ₹${basketTotal}`;
-        }
-      }
-
-      if (toast && toastText) {
-        toastText.textContent =
-          `Added ${quantity} × ${productName} to your basket!`;
-
-        toast.classList.remove(
-          'translate-y-20',
-          'opacity-0',
-          'pointer-events-none'
-        );
-
-        toast.classList.add(
-          'translate-y-0',
-          'opacity-100'
-        );
-
-        setTimeout(() => {
-          toast.classList.add(
-            'translate-y-20',
-            'opacity-0',
-            'pointer-events-none'
-          );
-
-          toast.classList.remove(
-            'translate-y-0',
-            'opacity-100'
-          );
-        }, 3000);
-      }
-    }
-  </script>
+  <!-- Toast Notification Portal -->
+  <div id="toast-portal" class="toast-portal"></div>
 
   <!-- Main Animation Script -->
   <script src="script.js"></script>
+  <!-- Cart System (ES Module) -->
+  <script type="module">
+    import { initCartUI } from './cart-ui.js';
+    initCartUI();
+  </script>
 </body>
 
 </html>
