@@ -491,13 +491,66 @@
   }
 
   // Confirm order
-  if (confirmOrderBtn) {
-    confirmOrderBtn.addEventListener('click', () => {
+  // Confirm order - send order to backend
+if (confirmOrderBtn) {
+  confirmOrderBtn.addEventListener('click', async () => {
+    const product = document.getElementById('modal-item-title').textContent;
+    const priceText = document.getElementById('modal-item-price').textContent;
+    const price = Number(priceText.replace('₹', '').trim());
+    const quantity = cartQuantity;
+    const total = quantity * price;
+
+    const pincode = pincodeInput ? pincodeInput.value.trim() : '';
+
+    try {
+      confirmOrderBtn.disabled = true;
+      confirmOrderBtn.textContent = 'Processing...';
+
+      const response = await fetch('/api/order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          product,
+          quantity,
+          price,
+          total,
+          pincode
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || 'Order failed');
+      }
+
       closeOrderModal();
-      showToast('🎉 Order Placed! Chilled courier dispatched from nearest Amul depot.', 'success');
+
+      showToast(
+        '🎉 Order received successfully!',
+        'success'
+      );
+
       playSoftChime(880);
-    });
-  }
+
+      console.log('Backend response:', data);
+
+    } catch (error) {
+      console.error('Order error:', error);
+
+      showToast(
+        '⚠️ Something went wrong. Please try again.',
+        'error'
+      );
+
+    } finally {
+      confirmOrderBtn.disabled = false;
+      confirmOrderBtn.innerHTML = 'Confirm Order';
+    }
+  });
+}
 
   // Replay Flow Button
   const replayBtn = document.getElementById('replay-btn');
