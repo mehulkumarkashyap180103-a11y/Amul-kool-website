@@ -537,6 +537,24 @@ body {
   display: block;
 }
 
+.cinema-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+.cinema-video.hidden {
+  display: none;
+}
+
+.canvas-wrapper.has-video #animation-canvas {
+  display: none;
+}
+
 .canvas-gradient-overlay {
   position: absolute;
   inset: 0;

@@ -1,6 +1,6 @@
 /**
  * AMUL ROYALE • ROSE VELVET MILK
- * High-Performance Frame Canvas Sequence & Interactive Experience
+ * Cinematic Scroll Experience — MP4 Video Scrub with JPG Frame Fallback
  */
 
 (function () {
@@ -10,30 +10,33 @@
   const TOTAL_FRAMES = 240;
   const FRAME_PATH_PREFIX = 'frames/ezgif-frame-';
   const FRAME_EXT = '.jpg';
-  
+  const VIDEO_SRC = '/amul-rose-commercial.mp4';
+
   // DOM Elements
   const canvas = document.getElementById('animation-canvas');
   const ctx = canvas.getContext('2d');
+  const video = document.getElementById('cinema-video');
+  const canvasWrapper = canvas ? canvas.parentElement : null;
   const heroSection = document.getElementById('hero-scroll');
   const scrollTracker = document.getElementById('scroll-tracker');
   const preloader = document.getElementById('preloader');
   const loadPercentEl = document.getElementById('load-percent');
   const preloaderBar = document.getElementById('preloader-progress');
   const preloaderStatus = document.getElementById('preloader-status');
-  
+
   // HUD Elements
   const currentFrameNumEl = document.getElementById('current-frame-num');
   const hudPlayBtn = document.getElementById('hud-play-toggle');
   const hudPlayIcon = document.getElementById('hud-play-icon');
   const headerPlayBtn = document.getElementById('header-play-btn');
   const stageDots = document.querySelectorAll('.stage-dot');
-  
+
   // Phase Elements
   const phase1 = document.getElementById('phase-1');
   const phase2 = document.getElementById('phase-2');
   const phase3 = document.getElementById('phase-3');
   const phase4 = document.getElementById('phase-4');
-  
+
   // Audio Elements
   const soundToggleBtn = document.getElementById('sound-toggle-btn');
   const soundLabel = document.getElementById('sound-label');
@@ -53,27 +56,114 @@
   let audioOscillators = [];
   let audioGainNode = null;
 
-  // --- HELPER: FRAME FILENAME PADDING ---
+  // --- VIDEO MODE STATE ---
+  let useVideo = false;
+  let videoReady = false;
+  let videoDuration = 0;
+  let lastVideoSeek = -1;
+
+  // =========================================================================
+  // MODE DETECTION: Try MP4 video first, fall back to 240-frame canvas
+  // =========================================================================
+
+  function tryVideoMode() {
+    if (!video || !video.canPlayType || !video.canPlayType('video/mp4')) {
+      return false;
+    }
+
+    let timedOut = false;
+    const timeout = setTimeout(() => {
+      timedOut = true;
+      if (!videoReady) {
+        startFrameMode();
+      }
+    }, 12000);
+
+    video.addEventListener('loadedmetadata', () => {
+      if (timedOut) return;
+      videoDuration = video.duration;
+      if (videoDuration && isFinite(videoDuration) && videoDuration > 0) {
+        videoReady = true;
+        clearTimeout(timeout);
+        startVideoMode();
+      }
+    }, { once: true });
+
+    video.addEventListener('error', () => {
+      clearTimeout(timeout);
+      if (!videoReady) {
+        startFrameMode();
+      }
+    }, { once: true });
+
+    // Kick off loading
+    video.load();
+    return true;
+  }
+
+  // =========================================================================
+  // VIDEO MODE: Scroll-driven scrubbing of the MP4 timeline
+  // =========================================================================
+
+  function startVideoMode() {
+    useVideo = true;
+
+    // Hide canvas, show video
+    if (canvasWrapper) canvasWrapper.classList.add('has-video');
+    if (video) video.classList.remove('hidden');
+
+    // Skip preloader quickly — video is ready
+    loadPercentEl.textContent = 100;
+    preloaderBar.style.width = '100%';
+    preloaderStatus.textContent = 'Ready to scroll…';
+    setTimeout(finishLoading, 300);
+  }
+
+  function renderVideoFrame(frameIndex) {
+    if (!video || !videoReady || videoDuration <= 0) return;
+
+    const progress = (frameIndex - 1) / (TOTAL_FRAMES - 1);
+    const seekTime = Math.max(0, Math.min(videoDuration, progress * videoDuration));
+
+    // Avoid redundant seeks to the same time
+    if (Math.abs(seekTime - lastVideoSeek) < 0.016) return;
+    lastVideoSeek = seekTime;
+
+    try {
+      video.currentTime = seekTime;
+    } catch (e) {
+      // Some browsers throw if seeking too fast; ignore
+    }
+
+    if (currentFrameNumEl) {
+      const clamped = Math.max(1, Math.min(TOTAL_FRAMES, Math.round(frameIndex)));
+      currentFrameNumEl.textContent = String(clamped).padStart(3, '0');
+    }
+  }
+
+  // =========================================================================
+  // FRAME MODE (FALLBACK): Original 240-JPG canvas system
+  // =========================================================================
+
   function getFrameUrl(index) {
     const padded = String(index).padStart(3, '0');
     return `${FRAME_PATH_PREFIX}${padded}${FRAME_EXT}`;
   }
 
-  // --- 1. FRAME PRELOADER WITH CONCURRENCY BATCHING ---
   function preloadImages() {
     let loaded = 0;
-    
+
     for (let i = 1; i <= TOTAL_FRAMES; i++) {
       const img = new Image();
       img.src = getFrameUrl(i);
-      
+
       img.onload = () => {
         loaded++;
         loadedCount = loaded;
         const pct = Math.floor((loaded / TOTAL_FRAMES) * 100);
         loadPercentEl.textContent = pct;
         preloaderBar.style.width = pct + '%';
-        
+
         if (loaded === 30) {
           preloaderStatus.textContent = 'Infusing natural rose essence...';
         } else if (loaded === 120) {
@@ -88,7 +178,6 @@
       };
 
       img.onerror = () => {
-        // Fallback for any missing frame: re-use previous
         loaded++;
         if (loaded === TOTAL_FRAMES) {
           setTimeout(finishLoading, 400);
@@ -99,29 +188,42 @@
     }
   }
 
+  function startFrameMode() {
+    useVideo = false;
+    if (video) video.classList.add('hidden');
+    preloadImages();
+  }
+
+  // =========================================================================
+  // SHARED: Loading complete, render engine, scroll, phases, cinema
+  // =========================================================================
+
   function finishLoading() {
     preloader.classList.add('fade-out');
-    // Initial canvas render
     resizeCanvas();
     renderFrame(1);
     createFloatingPetals();
   }
 
-  // --- 2. RETINA CANVAS SIZING & RENDER ENGINE ---
   function resizeCanvas() {
+    if (useVideo) return; // Video handles its own sizing via CSS
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
     const rect = canvas.getBoundingClientRect();
-    
+
     canvas.width = rect.width * dpr;
     canvas.height = rect.height * dpr;
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.scale(dpr, dpr);
-    
-    // Force redraw of current frame
+
     renderFrame(Math.round(currentFrame));
   }
 
   function renderFrame(index) {
+    if (useVideo) {
+      renderVideoFrame(index);
+      return;
+    }
+
     const clampedIndex = Math.max(1, Math.min(TOTAL_FRAMES, Math.round(index)));
     const img = frames[clampedIndex];
     if (!img || !img.complete) return;
@@ -132,7 +234,6 @@
 
     ctx.clearRect(0, 0, w, h);
 
-    // Calculate aspect fit / cover math (original frame is 1280x720)
     const imgW = img.naturalWidth || 1280;
     const imgH = img.naturalHeight || 720;
     const scale = Math.max(w / imgW, h / imgH);
@@ -141,10 +242,8 @@
     const offsetX = (w - renderW) / 2;
     const offsetY = (h - renderH) / 2;
 
-    // Draw frame
     ctx.drawImage(img, offsetX, offsetY, renderW, renderH);
 
-    // Update HUD indicator
     if (currentFrameNumEl) {
       currentFrameNumEl.textContent = String(clampedIndex).padStart(3, '0');
     }
@@ -152,14 +251,13 @@
 
   // --- 3. LERP ANIMATION LOOP ---
   function animationLoop() {
-    // Smooth lerp: moves smoothly towards targetFrame
     const diff = targetFrame - currentFrame;
     if (Math.abs(diff) > 0.05) {
       currentFrame += diff * 0.16;
       renderFrame(currentFrame);
       updateStoryPhases(currentFrame);
     }
-    
+
     requestAnimationFrame(animationLoop);
   }
 
@@ -168,13 +266,11 @@
     const scrollY = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     const globalProgress = docHeight > 0 ? scrollY / docHeight : 0;
-    
-    // Update global top progress bar
+
     if (scrollTracker) {
       scrollTracker.style.width = (globalProgress * 100) + '%';
     }
 
-    // Calculate scroll progress within hero-scroll (600vh)
     const heroRect = heroSection.getBoundingClientRect();
     const sectionTop = heroSection.offsetTop;
     const sectionHeight = heroSection.offsetHeight - window.innerHeight;
@@ -182,7 +278,7 @@
     if (scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight) {
       const heroProgress = (scrollY - sectionTop) / sectionHeight;
       const clamped = Math.max(0, Math.min(1, heroProgress));
-      
+
       if (!isPlayingAuto) {
         targetFrame = Math.round(clamped * (TOTAL_FRAMES - 1)) + 1;
       }
@@ -197,13 +293,9 @@
   function updateStoryPhases(frame) {
     const progress = (frame - 1) / (TOTAL_FRAMES - 1);
 
-    // Phase 1: 0% - 18% (Frames 1 - 44)
     const isP1 = progress >= 0 && progress < 0.18;
-    // Phase 2: 18% - 46% (Frames 45 - 110)
     const isP2 = progress >= 0.18 && progress < 0.46;
-    // Phase 3: 46% - 72% (Frames 111 - 173)
     const isP3 = progress >= 0.46 && progress < 0.72;
-    // Phase 4: 72% - 100% (Frames 174 - 240)
     const isP4 = progress >= 0.72 && progress <= 1.0;
 
     togglePhase(phase1, isP1);
@@ -211,7 +303,6 @@
     togglePhase(phase3, isP3);
     togglePhase(phase4, isP4);
 
-    // Update Stage Dots in HUD
     stageDots.forEach((dot, idx) => {
       let active = false;
       if (idx === 0 && isP1) active = true;
@@ -234,7 +325,7 @@
   // --- 6. AUTO-PLAY CINEMA MODE ---
   function toggleAutoPlay() {
     isPlayingAuto = !isPlayingAuto;
-    
+
     if (isPlayingAuto) {
       hudPlayIcon.innerHTML = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
       hudPlayBtn.classList.add('playing');
@@ -264,7 +355,7 @@
 
   function playCinemaStep() {
     if (!isPlayingAuto) return;
-    
+
     targetFrame += 0.8;
     if (targetFrame >= TOTAL_FRAMES) {
       targetFrame = TOTAL_FRAMES;
@@ -272,7 +363,6 @@
       return;
     }
 
-    // Sync scroll bar gently if user is watching
     const sectionTop = heroSection.offsetTop;
     const sectionHeight = heroSection.offsetHeight - window.innerHeight;
     const desiredScrollY = sectionTop + ((targetFrame - 1) / (TOTAL_FRAMES - 1)) * sectionHeight;
@@ -281,7 +371,6 @@
     autoPlayTimer = requestAnimationFrame(playCinemaStep);
   }
 
-  // Stop auto play if user manually scrolls or touches
   window.addEventListener('wheel', () => {
     if (isPlayingAuto) stopAutoPlay();
   }, { passive: true });
@@ -322,7 +411,7 @@
     }
 
     isAudioPlaying = !isAudioPlaying;
-    
+
     if (isAudioPlaying) {
       startSoundscape();
       soundToggleBtn.classList.add('playing');
@@ -338,13 +427,11 @@
   function startSoundscape() {
     if (!audioCtx) return;
 
-    // Create gentle warm pink harmonic chords (F#3, A#3, C#4, F4)
     const frequencies = [185.0, 233.08, 277.18, 349.23];
     audioGainNode = audioCtx.createGain();
     audioGainNode.gain.setValueAtTime(0.01, audioCtx.currentTime);
     audioGainNode.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 3);
 
-    // Warm Low-pass filter for cozy velvety milk feel
     const filter = audioCtx.createBiquadFilter();
     filter.type = 'lowpass';
     filter.frequency.setValueAtTime(450, audioCtx.currentTime);
@@ -353,10 +440,9 @@
       const osc = audioCtx.createOscillator();
       osc.type = idx % 2 === 0 ? 'sine' : 'triangle';
       osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-      
-      // Subtle vibrato/detune
+
       osc.detune.setValueAtTime(idx * 2 - 3, audioCtx.currentTime);
-      
+
       osc.connect(filter);
       osc.start();
       return osc;
@@ -459,13 +545,15 @@
   // --- 14. EVENT LISTENERS ---
   window.addEventListener('scroll', onScroll, { passive: true });
   window.addEventListener('resize', resizeCanvas);
-  
+
   if (soundToggleBtn) soundToggleBtn.addEventListener('click', toggleAudio);
   if (hudPlayBtn) hudPlayBtn.addEventListener('click', toggleAutoPlay);
   if (headerPlayBtn) headerPlayBtn.addEventListener('click', toggleAutoPlay);
 
-  // Initialize
-  preloadImages();
+  // Initialize — try video mode, fall back to frames
+  if (!tryVideoMode()) {
+    startFrameMode();
+  }
   animationLoop();
 
 })();
